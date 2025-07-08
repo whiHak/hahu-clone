@@ -6,6 +6,8 @@ const stats = [
 ];
 </script>
 
+
+
 <template>
   <div class="container mx-auto px-4 py-8">
     <!-- Hero Section -->
@@ -16,7 +18,7 @@ const stats = [
       <p class="text-lg font-medium text-gray-600 mb-8 text-center">
         Find career opportunities in Ethiopia
       </p>
-      <div class="flex w-full max-w-xl mb-10">
+      <div class="flex w-full max-w-xl mb-10 responsive-layout">
         <input
           type="text"
           placeholder="Job title, city or keyword..."
