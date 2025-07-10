@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: 'JobCard',
-  props: {
+<script setup lang="ts">
+  defineProps({
     title: { type: String, default: 'Senior Auto Electrician' },
     company: { type: String, default: 'Ethiopian Engineering...' },
     companyLogo: { type: String, default: '/images/job-banner.png' },
@@ -16,12 +14,11 @@ export default {
     views: { type: String, default: '10k' },
     sectorIcon: { type: String, default: '/images/business.png' },
     locationIcon: { type: String, default: '/images/engineering.svg' },
-  }
-}
+  })
 </script>
 
 <template>
-  <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] flex flex-col gap-4 cursor-pointer">
+  <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] h-[500px] flex flex-col gap-4 cursor-pointer">
     <!-- Featured Badge -->
      <div class="absolute top-0 right-5 flex gap-2 items-center w-8 h-8 z-10">
        <img src="/images/bookmark.png" alt="Featured" class="w-4 h-4" />
@@ -43,7 +40,7 @@ export default {
       <!-- Job Title and Info -->
       <div class="flex flex-2 flex-col gap-2 mt-2">
         <h2 class="text-mdI font-bold text-[#444F60] dark:text-[#C7CACF]">{{ title }}</h2>
-        <div class="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-[#C7CACF]">
+        <div class="flex flex-col gap-3 text-sm text-gray-600 dark:text-[#C7CACF]">
           <span class="flex items-center gap-1 text-xs">
             <img :src="sectorIcon" alt="Sector" class="w-4 h-4" />
             {{ sector }}
@@ -52,7 +49,6 @@ export default {
             <svg class="w-4 h-4 text-[#009688]" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4z" /></svg>
             {{ category }}
           </span>
-          <div class="flex flex-col flex-wrap gap-3 text-sm text-gray-600 dark:text-[#C7CACF]">
             <span class="flex items-center gap-1 text-xs">
               <img :src="locationIcon" alt="Location" class="w-4 h-4" />
               {{ location }}
@@ -65,7 +61,6 @@ export default {
               <svg class="w-4 h-4 text-[#009688]" fill="currentColor" viewBox="0 0 20 20"><path d="M13 7a3 3 0 11-6 0 3 3 0 016 0zm-3 5a7 7 0 00-6.938 6h13.876A7 7 0 0010 12z" /></svg>
               {{ positions }}
             </span>
-          </div>
         </div>
       </div>
     </div>

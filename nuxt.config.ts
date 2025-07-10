@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  ssr:true,
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',

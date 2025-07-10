@@ -15,4 +15,7 @@
   <!-- Services -->
     <Services/>
   
+  <!--Companies-->
+    <Companies/>
+  
 </template>

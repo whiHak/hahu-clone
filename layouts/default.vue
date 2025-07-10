@@ -28,7 +28,7 @@ console.log(route);
   <div class="min-h-screen flex flex-col text-[#697280] bg-[#ECEDEF] dark:bg-[#02201D] ">
     <!-- Navigation -->
     <header
-      class="header sticky top-0 z-50 w-full backdrop-blur "
+      class="header sticky top-0 z-101 w-full backdrop-blur "
     >
       <nav class="container flex h-16 items-center px-4">
         <!-- Logo -->
@@ -58,7 +58,7 @@ console.log(route);
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"
-              class="h-4 w-4"
+              class="h-4 w-4 dark:text-[#C7CACF]"
             />
           </button>
 
@@ -70,7 +70,7 @@ console.log(route);
             >
               Login
             </NuxtLink>
-            <p class="text-center align-baseline">or</p>
+            <p class="text-center dark:text-[#C7CACF] align-baseline">or</p>
             <NuxtLink
               to="/auth/register"
               class="inline-flex items-center justify-center text-nowrap  rounded-md text-xs font-medium bg-[#009688] hover:bg-[#6EC8C0] transition duration-300 h-7 px-2 text-white"

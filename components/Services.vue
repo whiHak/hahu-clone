@@ -1,9 +1,9 @@
-<script>
-const  services= [
-    { name: 'Natural Science', icon: '/images/engineering.svg', positions: 31 },
-    { name: 'Business', icon: '/images/engineering.svg', positions: 279 },
-    { name: 'Creative Arts', icon: '/images/engineering.svg', positions: 23 },
-]
+<script setup lang="ts">
+const services = ref([
+    { name: 'Natural Science', icon: '/images/job-banner.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+    { name: 'Business', icon: '/images/job-banner-2.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+    { name: 'Creative Arts', icon: '/images/engineering.svg', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+])
 </script>
 
 <template>
@@ -19,23 +19,23 @@ const  services= [
         subscription based relevant vacancy announcement notifications to job
         seekers that sign up on its primary service deployment.
       </p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 jusic lg:grid-cols-6 gap-6 w-full  mt-4">
+      <div class="">
         <UCarousel
-          v-slot="{ service }"
+          v-slot="{ item: service }"
           dots
           :items="services"
           :ui="{ 
-            container: 'gap-[20px] align-items-center',
-            dot: 'w-2 h-1 gap-0 bg-[#777] ',
-            dots: 'ml-22 mt-5',
-
+            container: 'gap-[20px] w-full',
+            dot: 'w-2 h-1 gap-0 bg-[#777]',
+            dots: 'mt-5',
+            item: 'basis-1/3'
           }"
-          class="w-full max-w-xs "
+          class="w-full gap-[20px] relative z-0"
         >
-        <div class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition">
-          <img :src="service.icon" :alt="service.name" class="w-16 h-16 mb-4" />
-          <h2 class="text-lg font-bold text-[#009688] mb-2">{{ service.name }}</h2>
-          <p class="text-gray-600 text-base">{{ service.positions }} Open positions</p>
+        <div class="bg-white dark:bg-[#1B2637] rounded-xl border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center min-w-max justify-center text-center hover:shadow-lg transition cursor-pointer">
+          <img :src="service.icon" :alt="service.name" class="w-30 h-30 mb-4" />
+          <h2 class="text-lg font-bold text-[#009688] dark:text-white mb-2">{{ service.name }}</h2>
+          <p class="text-gray-600 dark:text-[#C7CACF] text-base text-wrap w-60">{{ service.description }}</p>
         </div>
     
         </UCarousel>
