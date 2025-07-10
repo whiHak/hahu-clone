@@ -16,10 +16,10 @@ import { stats } from '~/constants';
         <input
           type="text"
           placeholder="Job title, city or keyword..."
-          class="flex-1 px-4 py-2 rounded-b-md border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder:font-bold "
+          class="flex-1 px-4 py-2 rounded-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold "
         />
         <button
-          class="flex items-center gap-2 px-6 py-3 bg-[#009688] text-white  font-bold rounded-r-md transition cursor-pointer"
+          class="flex items-center gap-2 px-6 py-2 bg-[#009688] text-white  font-bold rounded-r-md transition cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

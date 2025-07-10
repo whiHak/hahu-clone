@@ -17,5 +17,11 @@
   
   <!--Companies-->
     <Companies/>
-  
+
+  <!-- Why Choose Us -->
+    <WhyChooseUs/>
+    
+  <!-- Post Vacancy -->
+    <PostVacancy/>
+
 </template>
