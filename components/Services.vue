@@ -9,11 +9,11 @@ const  services= [
 <template>
   <div class="container mx-auto px-4 py-8">
     <section class="flex flex-col items-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 mb-2 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center">
         Services
       </h1>
       <p
-        class="text-sm font-medium text-gray-600 mb-8 text-wrap max-w-3xl text-center"
+        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mb-8 text-wrap max-w-3xl text-center"
       >
         HaHuJobs offers digital career profiling, job application and
         subscription based relevant vacancy announcement notifications to job

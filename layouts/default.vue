@@ -10,11 +10,14 @@ function setIsOpen(value: any) {
     isMobileMenuOpen.value = value
 }
 
+type Theme = "light" | "dark";
+
 const colorMode = useColorMode();
 const isDark = computed(() => colorMode.value === "dark");
 
-const toggleTheme = () => {
-  colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+const toggleTheme = (newTheme: Theme) => {
+  console.log("Preference before toggle:", useColorMode().preference);
+  useColorMode().preference = newTheme
 };
 
 const route = useRoute();
@@ -22,7 +25,7 @@ console.log(route);
 // const isActive = (href: string) => route.path === href; 
 </script>
 <template>
-  <div class="min-h-screen flex flex-col text-[#697280] bg-[#ECEDEF] ">
+  <div class="min-h-screen flex flex-col text-[#697280] bg-[#ECEDEF] dark:bg-[#02201D] ">
     <!-- Navigation -->
     <header
       class="header sticky top-0 z-50 w-full backdrop-blur "
@@ -30,7 +33,7 @@ console.log(route);
       <nav class="container flex h-16 items-center px-4">
         <!-- Logo -->
         <NuxtLink to="/" class="flex items-center gap-2 font-bold text-xl">
-            <img src="/logo_dark_2.svg" alt="Logo" class="w-40">
+            <img :src="isDark?'/logo_dark_1.svg':'/logo_dark_2.svg'" alt="Logo" class="w-40">
         </NuxtLink>
 
         <!-- Desktop Navigation -->
@@ -41,7 +44,7 @@ console.log(route);
             v-for="item in navigation"
             :key="item.href"
             :to="item.href"
-            class="nav-link text-sm font-[400] transition-colors hover:text-primary"
+            class="nav-link text-sm font-[400] transition-colors hover:text-[#6EC8C0] dark:text-white"
           >
             {{ item.name }}
           </NuxtLink>
@@ -51,7 +54,7 @@ console.log(route);
           <!-- Theme Toggle -->
           <button
             class="size-9 flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground cursor-pointer"
-            @click="toggleTheme"
+            @click="toggleTheme(colorMode.preference === 'dark' ? 'light' : 'dark')"
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"

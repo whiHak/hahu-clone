@@ -1,6 +1,8 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 
-@theme {
+
+@theme static {
   --font-inter: "Inter", "sans-serif";
   --container-padding: 2rem;
   --container-max-2xl: 1400px;
@@ -27,8 +29,7 @@
   --ring: 346.8 77.2% 49.8%;
 }
 
-.dark {
-  --background: 20 14.3% 4.1%;
+/* .dark {
   --foreground: 0 0% 95%;
   --card: 24 9.8% 10%;
   --card-foreground: 0 0% 95%;
@@ -47,7 +48,7 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 346.8 77.2% 49.8%;
-}
+} */
 
 /* Container utility for v4 (example) */
 @layer utilities {
@@ -58,7 +59,38 @@
     padding-right: var(--container-padding);
     max-width: 100%;
   }
-  .authButton{
+  .dark-mode body {
+    background-color: #091a28;
+    color: #ebf4f1;
+  }
+  .fade-left,
+  .fade-right {
+    position: absolute;
+    top: 0;
+    width: 80px; /* adjust as needed */
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .fade-left {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .fade-right {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+  }
+  .authButton {
     background: #009688;
     border-radius: var(--radius);
   }
@@ -87,5 +119,5 @@
   .primary {
     color: "#555";
   }
-}
   
+}

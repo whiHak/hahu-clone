@@ -5,20 +5,20 @@
     <div class="container mx-auto px-4 py-8">
     <!-- Hero Section -->
     <section class="flex flex-col items-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 mb-2 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center">
         All Ethiopian Jobs in One Place.
       </h1>
-      <p class="text-sm font-medium text-gray-600 mb-8 text-center">
+      <p class="text-sm font-medium text-gray-600 mb-8 dark:text-[#C7CACF] text-center">
         Find career opportunities in Ethiopia
       </p>
-      <div class="flex w-full max-w-xl mb-10 responsive-layout">
+      <div class="flex w-full max-w-md mb-10 transition-all duration-1000 ease-in-out focus-within:max-w-xl">
         <input
           type="text"
           placeholder="Job title, city or keyword..."
-          class="flex-1 px-4 py-2 rounded-b-md border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg"
+          class="flex-1 px-4 py-2 rounded-b-md border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder:font-bold "
         />
         <button
-          class="flex items-center gap-2 px-6 py-3 bg-[#009688] text-white font-bold rounded-r-md transition cursor-pointer"
+          class="flex items-center gap-2 px-6 py-3 bg-[#009688] text-white  font-bold rounded-r-md transition cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +41,10 @@
         <div
           v-for="stat in stats"
           :key="stat.label"
-          class="flex flex-col items-center"
+          class="flex flex-col items-center mb-20"
         >
           <span class="text-3xl font-bold text-teal-600">{{ stat.value }}</span>
-          <span class="text-base text-gray-700 font-medium">{{
+          <span class="text-base text-gray-700 dark:text-[#C7CACF] font-medium">{{
             stat.label
           }}</span>
         </div>

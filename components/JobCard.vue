@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-  <div class="relative bg-white rounded-xl hover:shadow-lg  border-2 border-gray-200 hover:border-[#009688] p-5 w-full min-w-[380px] mx-auto flex flex-col gap-4 cursor-pointer">
+  <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] flex flex-col gap-4 cursor-pointer">
     <!-- Featured Badge -->
      <div class="absolute top-0 right-5 flex gap-2 items-center w-8 h-8 z-10">
        <img src="/images/bookmark.png" alt="Featured" class="w-4 h-4" />
@@ -35,15 +35,15 @@ export default {
     <div class="flex items-center gap-2">
       <!-- Company Logo and Name -->
       <div class="flex flex-1 flex-col items-center gap-3 mt-4">
-        <img :src="companyLogo" alt="EEC Logo" class=" rounded bg-gray-50 p-1" />
+        <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1" />
         <div class="flex flex-col">
-          <span class="text-gray-700 font-semibold text-base leading-tight">{{ company }}</span>
+          <span class="text-gray-700 dark:text-[#C7CACF] font-semibold text-base leading-tight">{{ company }}</span>
         </div>
       </div>
       <!-- Job Title and Info -->
       <div class="flex flex-2 flex-col gap-2 mt-2">
-        <h2 class="text-mdI font-bold text-[#444F60]">{{ title }}</h2>
-        <div class="flex flex-wrap gap-3 text-sm text-gray-600">
+        <h2 class="text-mdI font-bold text-[#444F60] dark:text-[#C7CACF]">{{ title }}</h2>
+        <div class="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-[#C7CACF]">
           <span class="flex items-center gap-1 text-xs">
             <img :src="sectorIcon" alt="Sector" class="w-4 h-4" />
             {{ sector }}
@@ -52,7 +52,7 @@ export default {
             <svg class="w-4 h-4 text-[#009688]" fill="currentColor" viewBox="0 0 20 20"><path d="M4 3a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4zm0 4a1 1 0 000 2h12a1 1 0 100-2H4z" /></svg>
             {{ category }}
           </span>
-          <div class="flex flex-col flex-wrap gap-3 text-sm text-gray-600">
+          <div class="flex flex-col flex-wrap gap-3 text-sm text-gray-600 dark:text-[#C7CACF]">
             <span class="flex items-center gap-1 text-xs">
               <img :src="locationIcon" alt="Location" class="w-4 h-4" />
               {{ location }}
@@ -79,7 +79,7 @@ export default {
 
     <hr class="border-t border-gray-300 my-2" />
     <!-- Job Summary -->
-    <div class="text-gray-600 text-center font-semibold text-sm line-clamp-3">
+    <div class="text-gray-600 text-center font-semibold text-sm line-clamp-3 dark:text-[#C7CACF]">
       {{ summary }}
     </div>
     <!-- Buttons -->

@@ -43,7 +43,7 @@ export default {
         {
           title: "Senior Auto Electrician",
           company: "Ethiopian Engineering...",
-          companyLogo: "/images/job-banner.png",
+          companyLogo: "/images/job-banner-2.png",
           sector: "Low and Medium Skilled Worker",
           category: "Auto Mechanical Skilled Worker",
           location: "Addis Ababa",
@@ -60,7 +60,7 @@ export default {
         {
           title: "Senior Auto Electrician",
           company: "Ethiopian Engineering...",
-          companyLogo: "/images/job-banner.png",
+          companyLogo: "/images/job-banner-3.jpg",
           sector: "Low and Medium Skilled Worker",
           category: "Auto Mechanical Skilled Worker",
           location: "Addis Ababa",
@@ -101,31 +101,33 @@ export default {
   <div class="container mx-auto px-4 py-8 overflow-x-hidden">
     <!-- Featured Jobs Section -->
     <section class="flex flex-col items-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 mb-2 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center">
         Featured Jobs
       </h1>
-      <p class="text-sm font-medium text-gray-600 mb-8 text-center">
+      <p class="text-sm font-medium text-gray-600 mb-8 text-center dark:text-[#C7CACF]">
         Explore our handpicked selection of top job openings. Find your dream
         career match today.
       </p>
-      <div class="">
-        <UCarousel
-          v-slot="{ job }"
-          dots
-          loop
-          :items="jobs"
-          :autoplay="{ delay: 3000 }"
-          :ui="{ 
-            container: 'gap-[20px] align-items-center',
-            dot: 'w-2 h-1 gap-0 bg-[#777] ',
-            dots: 'ml-22 mt-5',
-
-          }"
-          class="w-full max-w-xs "
-        >
-          <JobCard v-bind="job" />
-        </UCarousel>
-      </div>
+      <div class="relative rounded-2xl overflow-hidden">
+        <div class="absolute inset-y-0 left-0 w-70 bg-gradient-to-r from-[#ECEDEF] dark:from-[#02201D] to-transparent z-100 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-70 bg-gradient-to-l from-[#ECEDEF] dark:from-[#02201D] to-transparent z-100 pointer-events-none"></div>
+  
+          <UCarousel
+            v-slot="{ job }"
+            dots
+            loop
+            :items="jobs"
+            :autoplay="{ delay: 3000 }"
+            :ui="{ 
+              dot: 'w-2 h-1 gap-0 bg-[#777]',
+              dots: 'mt-5',
+              item: 'basis-1/4'
+            }"
+            class="w-full max-w-full gap-[20px] relative z-0"
+          >
+            <JobCard v-bind="job" />
+          </UCarousel>
+    </div>
     </section>
   </div>
 </template>
