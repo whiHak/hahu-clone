@@ -4,24 +4,27 @@
 
 <template>
   <!-- Hero Section -->
-    <Hero/>
+    <LandingHero/>
 
   <!-- Featured section -->
-    <FeaturedJobs/>
+    <LandingFeaturedJobs/>
 
   <!-- Career Section -->
-    <CareerSection/>
+    <LandingCareerSection/>
 
   <!-- Services -->
-    <Services/>
+    <LandingServices/>
   
   <!--Companies-->
-    <Companies/>
+    <LandingCompanies/>
 
   <!-- Why Choose Us -->
-    <WhyChooseUs/>
+    <LandingWhyChooseUs/>
     
   <!-- Post Vacancy -->
-    <PostVacancy/>
+    <LandingPostVacancy/>
+
+  <!--News-->
+    <LandingNews/>
 
 </template>

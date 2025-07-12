@@ -123,7 +123,7 @@ const jobs = ref([
           }"
           class="w-full max-w-full gap-[20px] relative z-0"
         >
-          <JobCard v-bind="job" />
+          <LandingJobCard v-bind="job" />
         </UCarousel>
       </div>
     </section>

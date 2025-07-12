@@ -12,14 +12,14 @@ import { stats } from '~/constants';
       <p class="text-sm font-medium text-gray-600 mb-8 dark:text-[#C7CACF] text-center">
         Find career opportunities in Ethiopia
       </p>
-      <div class="flex w-full max-w-md mb-10 transition-all duration-1000 ease-in-out focus-within:max-w-xl">
+      <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-1 sm:0 w-full max-w-md mb-10 transition-all duration-1000 ease-in-out focus-within:max-w-xl">
         <input
           type="text"
           placeholder="Job title, city or keyword..."
-          class="flex-1 px-4 py-2 rounded-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold "
+          class="flex-1 px-4 py-[5px] rounded-l-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold "
         />
         <button
-          class="flex items-center gap-2 px-6 py-2 bg-[#009688] text-white  font-bold rounded-r-md transition cursor-pointer"
+          class="flex items-center gap-2 px-6 py-2 bg-[#009688] text-white w-max font-bold rounded-md md:rounded-l-[0] transition cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +51,6 @@ import { stats } from '~/constants';
         </div>
       </div>
     </section>
+    <img src="/banner.svg" alt="Logo" class="w-full" />
   </div>
-  <img src="/banner.svg" alt="Logo" />
 </template>

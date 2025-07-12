@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const companies = ref([
         { name: 'Natural Science', icon: '/images/job-banner.png'},
         { name: 'Business', icon: '/images/job-banner-2.png'},
@@ -42,13 +44,15 @@ const companies = ref([
           loop
           auto-scroll
           :items="companies"
-          :autoplay="{ delay: 3000 }"
+          :autoplay="{ 
+            delay: 4000,
+          }"
           :ui="{
             dot: 'w-2 h-1 gap-0 bg-[#777]',
             dots: 'mb-5',
             item: 'basis-1/10',
           }"
-          class="w-full gap-[20px] relative z-0"
+          class="w-full  gap-[20px] relative z-0"
         >
         <div class="bg-white w-30 h-30 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
           <img :src="company.icon" :alt="company.name" class="w-16 h-16 mb-4" />

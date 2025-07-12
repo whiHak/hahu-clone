@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const services = ref([
     { name: 'Natural Science', icon: '/images/job-banner.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
     { name: 'Business', icon: '/images/job-banner-2.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
@@ -13,29 +15,29 @@ const services = ref([
         Services
       </h1>
       <p
-        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mb-8 text-wrap max-w-3xl text-center"
+        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mt-5 mb-8 text-wrap max-w-3xl text-center"
       >
         HaHuJobs offers digital career profiling, job application and
         subscription based relevant vacancy announcement notifications to job
         seekers that sign up on its primary service deployment.
       </p>
-      <div class="">
+      <div class="overflow-hidden">
         <UCarousel
           v-slot="{ item: service }"
           dots
           :items="services"
           :ui="{ 
-            container: 'gap-[20px] w-full',
+            container: 'gap-[20px] w-full align',
             dot: 'w-2 h-1 gap-0 bg-[#777]',
-            dots: 'mt-5',
-            item: 'basis-1/3'
+            dots: 'mtgreen',
+            item: 'md:basis-1/3'
           }"
-          class="w-full gap-[20px] relative z-0"
+          class="max-w-screen gap-[20px] relative z-0"
         >
-        <div class="bg-white dark:bg-[#1B2637] rounded-xl border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center min-w-max justify-center text-center hover:shadow-lg transition cursor-pointer">
-          <img :src="service.icon" :alt="service.name" class="w-30 h-30 mb-4" />
+        <div class="bg-white dark:bg-[#1B2637] rounded-xl border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
+          <img :src="service.icon" :alt="service.name" class="w-40 h-40 mb-4" />
           <h2 class="text-lg font-bold text-[#009688] dark:text-white mb-2">{{ service.name }}</h2>
-          <p class="text-gray-600 dark:text-[#C7CACF] text-base text-wrap w-60">{{ service.description }}</p>
+          <p class="text-gray-600 dark:text-[#C7CACF] text-sm text-wrap w-60">{{ service.description }}</p>
         </div>
     
         </UCarousel>
