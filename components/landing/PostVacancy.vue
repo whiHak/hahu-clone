@@ -3,35 +3,35 @@
 </script>
 
 <template>
-  <section class="bg-[#f8fdfc] dark:bg-[#1B2637] rounded-3xl py-12 px-0 my-10">
-    <div class="container mx-auto flex flex-col md:flex-row items-start justify-center">
+  <section class="bg-[#f8fdfc] dark:bg-[#1B2637] px-5 sm:py-14">
+    <div class="sm:container mx-auto flex flex-col md:flex-row items-start justify-center">
     <div class="relative top-10 lg:-translate-y-1 flex-1 flex items-center justify-center sm:min-w-[320px]  min-w-30">
       <img src="/images/job_application.png" alt="Job Application" class="max-w-[380px] w-full" />
     </div>
-    <div class="flex-1 max-w-2xl md:ml-16 mt-10 md:mt-0">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white mb-4">Post vacancy</h2>
-      <p class="text-gray-700 dark:text-[#C7CACF] text-base md:text-lg mb-6 leading-relaxed">
+    <div class="flex-1 gap-10 max-w-2xl md:ml-16 mt-10 md:mt-0">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 text-center sm:text-left dark:text-white mb-4">Post vacancy</h2>
+      <p class="text-gray-700 dark:text-[#C7CACF] text-base md:text-sm mb-10 text-center sm:text-left">
         HaHuJobs offers dedicated enterprise cloud services for a full human resource management platform with an affordable price package. Posting vacancy is completely free, and only requires to follow the below listed steps.
       </p>
-      <div class=" grid grid-cols-2 gap-3  mb-8">
+      <div class=" grid sm:grid-cols-2 gap-3  mb-8">
         <div class="flex flex-col items-start mb-4">
           <div class="flex flex-row items-end">
-            <div class="text-5xl font-bold text-gray-600 dark:text-white min-w-[54px]">01</div>
-            <div class=" text-lg ml-3 text-gray-500 dark:text-white mb-1">Receive</div>
+            <div class="text-5xl font-bold text-gray-600 dark:text-[#009688] min-w-[54px]">01</div>
+            <div class=" text-lg ml-3 text-gray-500 dark:text-[#009688] mb-1">Receive</div>
           </div>
           <p class="text-gray-500 dark:text-[#C7CACF] mt-3  text-xs leading-snug">You contact us through one of our outlets with the details of your vacancy. You can click the button below to review ways to share your vacancy and review the required information we need to publish your vacancy on all our outlets.</p>
         </div>
         <div class="flex flex-col items-start mb-4">
           <div class="flex flex-row items-end">
-            <div class="text-5xl font-bold text-gray-600 dark:text-white min-w-[54px]">02</div>
-            <div class=" text-lg ml-3 text-gray-500 dark:text-white mb-1">Receive</div>
+            <div class="text-5xl font-bold text-gray-600 dark:text-[#009688] min-w-[54px]">02</div>
+            <div class=" text-lg ml-3 text-gray-500 dark:text-[#009688] mb-1">Receive</div>
           </div>
           <p class="text-gray-500 dark:text-[#C7CACF] mt-3 text-xs leading-snug">You contact us through one of our outlets with the details of your vacancy. You can click the button below to review ways to share your vacancy and review the required information we need to publish your vacancy on all our outlets.</p>
         </div>
         <div class="flex flex-col items-start mb-4">
           <div class="flex flex-row items-end">
-            <div class="text-5xl font-bold text-gray-600 dark:text-white min-w-[54px]">03</div>
-            <div class=" text-lg ml-3 text-gray-500 dark:text-white mb-1">Receive</div>
+            <div class="text-5xl font-bold text-gray-600 dark:text-[#009688] min-w-[54px]">03</div>
+            <div class=" text-lg ml-3 text-gray-500 dark:text-[#009688] mb-1">Receive</div>
           </div>
           <p class="text-gray-500 dark:text-[#C7CACF] mt-3 text-xs leading-snug">You contact us through one of our outlets with the details of your vacancy. You can click the button below to review ways to share your vacancy and review the required information we need to publish your vacancy on all our outlets.</p>
         </div>

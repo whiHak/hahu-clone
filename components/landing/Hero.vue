@@ -16,7 +16,7 @@ import { stats } from '~/constants';
         <input
           type="text"
           placeholder="Job title, city or keyword..."
-          class="flex-1 px-4 py-[5px] [@media(min-width:24rem)]:py-[9px] w-[75vw] xsm:w-[45vw] sm:w-[40vw] md:w-[40vw] lg:w-[35vw] xl:w-[30vw] 2xl:w-[20vw] 3xl:w-[400px] 3xl:max-w-[600px] rounded-l-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold focus:ring-transparent placeholder:text-[16px]  [@media(min-width:24rem)]:max-w-[200px]  [@media(min-width:24rem)]:ml-5  "
+          class="flex-1 px-4 py-[5px] [@media(min-width:24rem)]:py-[9px] w-[75vw] xsm:w-[45vw] sm:w-[40vw] md:w-[40vw] lg:w-[35vw] xl:w-[30vw] 2xl:w-[20vw] 3xl:w-[400px] 3xl:max-w-[600px] rounded-l-lg border-1 border-gray-300 dark:border-[#444F60] dark:focus:border-[#444F60] dark:focus:outline-[#444F60] hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] dark:bg-[#444F60] bg-white placeholder:font-bold focus:ring-transparent placeholder:text-[16px]  [@media(min-width:24rem)]:w-[200px]  [@media(min-width:24rem)]:ml-5  focus:rounded-bl-[0]"
         />
         <button
           class="flex items-center gap-2 px-6 py-3 text-nowrap bg-[#009688] text-white w-max font-bold rounded-md rounded-l-[0] transition cursor-pointer"

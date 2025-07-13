@@ -140,8 +140,8 @@ const isActive = (href: string) => route.path === href;
         <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">HahuJobs IO</a>
         <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Minab Tech</a>
       </div>
-      <div class="flex flex-col min-w-[120px] md:min-w-[320px] max-w-[420px] items-start">
-        <img src="/images/minab-logo.png" alt="Minab Logo" class="w-[90px] mb-2" />
+      <div class="flex flex-col items-center min-w-[120px] md:min-w-[320px] max-w-[420px] sm:items-start">
+        <img src="/images/minab-logo.png" alt="Minab Logo" class="w-40 mb-2" />
         <p class="text-gray-700 dark:text-white text-sm mt-1 font-medium text-wrap w-60 md:w-120 leading-relaxed">
           HaHuJobs is a cloud based product owned and manged by a technology consulting firm called Minab IT solutions PLC. Minab was founded in 2014 and has an extensive experience in software development for the past nine years.
         </p>

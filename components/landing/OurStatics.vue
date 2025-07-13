@@ -6,7 +6,7 @@ import { stats } from '~/constants';
 <template>
   <div class="container mx-auto px-4 py-8">
     <section class="flex flex-col items-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-700 dark:text-white mb-2 text-center">
+      <h1 class="text-3xl text-nowrap py-10 sm:text-4xl md:text-5xl font-bold text-gray-700 dark:text-white mb-2 text-center">
         Our Latest Statistics
       </h1>
 
