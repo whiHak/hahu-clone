@@ -3,8 +3,8 @@
 
 
 @theme static {
-  --font-inter: "Inter", "sans-serif";
-  --container-padding: 2rem;
+  --font-inter: "Roboto", "sans-serif";
+  --container-padding: 4rem;
   --container-max-2xl: 2060px;
   --radius: 0.5rem;
   /* Colors */

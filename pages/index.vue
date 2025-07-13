@@ -23,6 +23,9 @@
     
   <!-- Post Vacancy -->
     <LandingPostVacancy/>
+  
+  <!-- Our Statics -->
+    <LandingOurStatics/>
 
   <!--News-->
     <LandingNews/>

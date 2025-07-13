@@ -4,7 +4,7 @@ import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { Dialog, DialogOverlay, DialogPanel } from '@headlessui/vue';
 
-const isMobileMenuOpen = ref(false); // Start with the menu closed
+const isMobileMenuOpen = ref(false);
 
 function setIsOpen(value: any) {
     isMobileMenuOpen.value = value
@@ -17,24 +17,24 @@ const isDark = computed(() => colorMode.value === "dark");
 
 const toggleTheme = (newTheme: Theme) => {
   console.log("Preference before toggle:", useColorMode().preference);
-  useColorMode().preference = newTheme
+  colorMode.preference = newTheme
 };
 
 const route = useRoute();
 console.log(route.fullPath);
-// const isActive = (href: string) => route.path === href; 
+const isActive = (href: string) => route.path === href; 
 </script>
 <template>
   <div class="min-h-screen flex flex-col text-[#697280] bg-[#ECEDEF] dark:bg-[#02201D] ">
     <!-- Navigation -->
     <header
-      class="header sticky top-0 z-101 w-full backdrop-blur "
+      class="sm:container mx-auto  sticky top-0 z-101 w-full backdrop-blur "
     >
-      <nav class="container flex h-16 items-center px-4">
+      <nav class="flex h-16 items-center px-4">
         <!-- Logo -->
         <NuxtLink to="/" class="flex flex-col text-xl">
             <img :src="isDark?'/logo_dark_1.svg':'/logo_dark_2.svg'" alt="Logo" class="w-40">
-            <div class="dark:text-secondary-8 text-xs ml-0.5 mt-0.5"> Primary </div>
+            <div class="dark:text-white text-xs ml-0.5 mt-0.5"> Primary </div>
         </NuxtLink>
 
         <!-- Desktop Navigation -->
@@ -45,7 +45,7 @@ console.log(route.fullPath);
             v-for="item in navigation"
             :key="item.href"
             :to="item.href"
-            class="nav-link text-sm font-[400] transition-colors hover:text-[#6EC8C0] dark:text-white"
+            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]  dark:text-white' : 'nav-link text-sm font-[400] transition-colors dark:text-white'"
           >
             {{ item.name }}
           </NuxtLink>
@@ -59,7 +59,7 @@ console.log(route.fullPath);
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"
-              class="h-4 w-4 dark:text-[#C7CACF]"
+              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF]"
             />
           </button>
 
@@ -85,30 +85,29 @@ console.log(route.fullPath);
               class="mr-2"
               @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
-              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-6 w-6" />
+              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-7 w-7 dark:text-white" />
             </button>
           </div>
           <!-- Mobile Navigation Dialog -->
           <Dialog :open="isMobileMenuOpen"  @close="setIsOpen" class="fixed text-[#697280] w-full inset-0 z-50 md:hidden">
             <div class="flex items-center justify-center h-full">
               <DialogPanel class="absolute top-15 w-full  backdrop-blur-lg rounded-lg p-6">
-                <nav class="container grid gap-y-4 py-2 ">
+                <nav class="grid gap-y-4 py-2 dark:text-white ">
                   <NuxtLink 
                     v-for="item in navigation" 
                     :key="item.href" 
                     :to="item.href"
-                    class="text-lg font-[400] hover:text-primary"
+                    :class="isActive(item.href) ? 'nav-link text-lg font-semibold transition-colors text-[#009688] border-l-4 border-[#009688] pl-2' : 'nav-link text-lg font-[400] transition-color border-l-4 border-[#009688] pl-2'"
                     @click="isMobileMenuOpen = false"
                   >
                     {{ item.name }}
                   </NuxtLink>
-                  <!-- separator line -->
-                    <hr class="border-t border-gray-300 my-4" />
+                    <hr class="border-t border-gray-300 my-4 w-full" />
                   <NuxtLink 
                     v-for="item in mobNavigation" 
                     :key="item.href" 
                     :to="item.href"
-                    class="text-lg font-[400]  hover:text-primary"
+                    :class="isActive(item.href) ? 'nav-link text-lg font-semibold transition-colors text-[#009688] border-l-4 border-[#009688] pl-2' : 'nav-link text-lg font-[400] transition-color border-l-4 border-[#009688] pl-2'"
                     @click="isMobileMenuOpen = false"
                   >
                     {{ item.name }}
@@ -133,17 +132,17 @@ console.log(route.fullPath);
     <div class="container flex flex-wrap justify-between items-start px-16 py-2 gap-10">
       <div class="flex flex-col min-w-[60px] max-w-[320px]">
         <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Get Started</div>
-        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition">Sign up</a>
-        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition">Login</a>
+        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Sign up</a>
+        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Login</a>
       </div>
       <div class="flex flex-col min-w-[60px] max-w-[320px]">
         <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Quick links</div>
-        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition">HahuJobs IO</a>
-        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition">Minab Tech</a>
+        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">HahuJobs IO</a>
+        <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Minab Tech</a>
       </div>
       <div class="flex flex-col min-w-[120px] md:min-w-[320px] max-w-[420px] items-start">
         <img src="/images/minab-logo.png" alt="Minab Logo" class="w-[90px] mb-2" />
-        <p class="text-gray-700 dark:text-white text-sm mt-1 text-wrap w-60 md:w-80 leading-relaxed">
+        <p class="text-gray-700 dark:text-white text-sm mt-1 font-medium text-wrap w-60 md:w-120 leading-relaxed">
           HaHuJobs is a cloud based product owned and manged by a technology consulting firm called Minab IT solutions PLC. Minab was founded in 2014 and has an extensive experience in software development for the past nine years.
         </p>
       </div>

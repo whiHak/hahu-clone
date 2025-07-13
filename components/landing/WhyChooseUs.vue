@@ -4,8 +4,8 @@
 
 <template>
   <section class=" container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start pt-12 pb-0 px-0">
-    <div class="max-w-xl ml-10 flex-1">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-white  mb-6 leading-tight">
+    <div class="max-w-[578px] ml-10 flex-1">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white  mb-6 leading-tight">
         <span>What makes us</span><br />
         <span>standout from the rest</span>
       </h2>
@@ -16,7 +16,7 @@
         Our vacancy classification follows a combination of ILOs ISCO 8 and the O*Net occupation classification with modifications to the Ethiopian labor market trend. Each vacancy will be given a four-digit occupation taxonomy identification code to determine it's overall standard requirements in terms of skill, knowledge, ability, and expected activities.
       </p>
       <div class="my-6">
-        <button class="bg-teal-600 hover:bg-teal-700 text-white rounded-md px-7 py-1 font-semibold flex items-center gap-2 transition">
+        <button class="bg-teal-600 hover:bg-teal-700 text-white text-sm rounded-md px-5 py-1 font-semibold flex items-center gap-2 transition">
           Explore more
           <span class="text-xl">→</span>
         </button>
@@ -29,7 +29,36 @@
       </div>
     </div>
     <div class=" min-w-[220px] max-w-xl mx-auto mb-12 lg:mt-0 mr-10">
-      <img src="/images/hahu_robot.svg" alt="Robot" class="relative top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 w-[380px] z-20" />
+      <img src="/images/hahu_robot.svg" alt="Robot" class="relative top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
+    </div>
+  </section>
+  <section class=" container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row-reverse justify-between items-start pt-12 pb-0 px-0">
+    <div class="max-w-xl ml-10 flex-1">
+      <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white  mb-6 leading-tight">
+        <span class=" font-bold mb-2">What Choose us</span>
+        <span class="text-teal-600 text-md font-bold">Convenience</span>        
+        <span class="text-teal-600 text-sm font-bold">You no longer look for jobs, jobs look for you</span>
+      </div>
+      <p class="text-gray-700 dark:text-[#C7CACF] md:text-md mb-4 leading-relaxed">
+        HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of.
+      </p>
+      <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white  mb-6 leading-tight">
+        <span class="text-teal-600 text-md font-bold">Accessibility</span>        
+        <span class="text-teal-600 text-sm font-bold">You no longer look for jobs, jobs look for you</span>
+      </div>
+      <p class="text-gray-700 dark:text-[#C7CACF] md:text-md mb-4 leading-relaxed">
+        HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of.
+      </p>
+      <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white  mb-6 leading-tight">
+        <span class="text-teal-600 text-md font-bold">Ease of use</span>        
+        <span class="text-teal-600 text-sm font-bold">You no longer look for jobs, jobs look for you</span>
+      </div>
+      <p class="text-gray-700 dark:text-[#C7CACF] md:text-md mb-4 leading-relaxed">
+        HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of.
+      </p>
+    </div>
+    <div class=" min-w-[220px] max-w-xl mb-12 lg:mt-0 md:ml-35">
+      <img src="/images/keyboard.svg" alt="Robot" class="relative md:top-40 top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
     </div>
   </section>
 </template>

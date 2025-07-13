@@ -3,23 +3,23 @@ import { stats } from '~/constants';
 
 </script>
 <template>
-    <div class="container mx-auto px-4 py-8">
+    <div class="sm:container mx-auto px-4 py-8">
     <!-- Hero Section -->
     <section class="flex flex-col items-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center">
+      <h1 class="text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center">
         All Ethiopian Jobs in One Place.
       </h1>
-      <p class="text-sm font-medium text-gray-600 mb-8 dark:text-[#C7CACF] text-center">
+      <p class="text-md font-medium text-gray-600 mb-8 dark:text-[#C7CACF] text-center">
         Find career opportunities in Ethiopia
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-1 sm:0 w-full max-w-md mb-10 transition-all duration-1000 ease-in-out focus-within:max-w-xl">
+      <div class="flex mx-auto flex-col [@media(min-width:24rem)]:flex-row items-center gap-1 sm:0 w-full max-w-sm sm:max-w-md mb-10 transition-all duration-1000 ease-in-out focus-within:max-w-lg">
         <input
           type="text"
           placeholder="Job title, city or keyword..."
-          class="flex-1 px-4 py-[5px] rounded-l-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold "
+          class="flex-1 px-4 py-[5px] [@media(min-width:24rem)]:py-[9px] w-[75vw] xsm:w-[45vw] sm:w-[40vw] md:w-[40vw] lg:w-[35vw] xl:w-[30vw] 2xl:w-[20vw] 3xl:w-[400px] 3xl:max-w-[600px] rounded-l-sm border border-gray-300 focus:outline-gray-300 hover:ring-[1px] hover:ring-[#009688] text-lg dark:placeholder-[#C7CACF] placeholder-[#6B7280] placeholder:font-bold focus:ring-transparent placeholder:text-[16px]  [@media(min-width:24rem)]:max-w-[200px]  [@media(min-width:24rem)]:ml-5  "
         />
         <button
-          class="flex items-center gap-2 px-6 py-2 bg-[#009688] text-white w-max font-bold rounded-md md:rounded-l-[0] transition cursor-pointer"
+          class="flex items-center gap-2 px-6 py-3 text-nowrap bg-[#009688] text-white w-max font-bold rounded-md rounded-l-[0] transition cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ import { stats } from '~/constants';
         <div
           v-for="stat in stats"
           :key="stat.label"
-          class="flex flex-col items-center mb-20"
+          class="flex flex-col items-center"
         >
           <span class="text-3xl font-bold text-teal-600">{{ stat.value }}</span>
           <span class="text-base text-gray-700 dark:text-[#C7CACF] font-medium">{{
@@ -51,6 +51,7 @@ import { stats } from '~/constants';
         </div>
       </div>
     </section>
-    <img src="/banner.svg" alt="Logo" class="w-full" />
+    <img src="/banner.svg" alt="Logo" class="w-full mt-5" />
   </div>
+  <img src="/images/dots.svg" alt="Logo" class="absolute hidden dark:md:block top-30 left-0 w-60" />
 </template>

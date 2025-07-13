@@ -89,11 +89,11 @@ const jobs = ref([
 </script>
 
 <template>
-  <div class="container mx-auto px-4 py-8 overflow-x-hidden">
+  <div class="sm:container mx-auto px-4 py-8 overflow-x-hidden">
     <!-- Featured Jobs Section -->
     <section class="flex flex-col items-center">
       <h1
-        class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-2 text-center"
+        class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-white mb-7 text-center"
       >
         Featured Jobs
       </h1>

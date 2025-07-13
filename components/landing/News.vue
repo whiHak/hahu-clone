@@ -60,7 +60,7 @@ const News = ref([
 </script>
 
 <template>
-  <div class="container mx-auto px-4 py-8">
+  <div class="container mx-auto px-4 py-8 bg-[#f8fdfc]">
     <section class="flex flex-col items-center">
       <h1
         class="text-3xl md:text-4xl font-extrabold text-gray-700 mb-10 dark:text-white text-center"
