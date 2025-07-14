@@ -21,7 +21,7 @@ const services = ref([
         subscription based relevant vacancy announcement notifications to job
         seekers that sign up on its primary service deployment.
       </p>
-      <div class="overflow-x-hidden h-[400px] sm:h-[650px]">
+      <div class="overflow-x-hidden h-[400px]">
         <UCarousel
           v-slot="{ item: service }"
           dots

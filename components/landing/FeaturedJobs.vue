@@ -103,7 +103,7 @@ const jobs = ref([
         Explore our handpicked selection of top job openings. Find your dream
         career match today.
       </p>
-      <div class="relative rounded-2xl overflow-x-hidden h-[550px] sm:h-[650px]">
+      <div class="relative rounded-2xl overflow-x-hidden h-[550px]">
         <div
           class="absolute inset-y-0 left-0 w-70 bg-gradient-to-r from-[#ECEDEF] dark:from-[#02201D] to-transparent z-100 pointer-events-none"
         ></div>
