@@ -15,7 +15,7 @@ const services = ref([
         Services
       </h1>
       <p
-        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mt-5 mb-8 text-wrap max-w-3xl text-center"
+        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mt-5 mb-8 text-wrap max-w-xl text-center"
       >
         HaHuJobs offers digital career profiling, job application and
         subscription based relevant vacancy announcement notifications to job
@@ -34,7 +34,7 @@ const services = ref([
           }"
           class="max-w-screen gap-[20px] relative z-0"
         >
-        <div class="bg-white dark:bg-[#1B2637] rounded-xl border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
+        <div class="bg-white dark:bg-[#1B2637] rounded-xl mx-auto border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
           <img :src="service.icon" :alt="service.name" class="w-40 h-40 mb-4" />
           <h2 class="text-lg font-bold text-[#009688] dark:text-white mb-2">{{ service.name }}</h2>
           <p class="text-gray-600 dark:text-[#C7CACF] text-sm text-wrap w-60">{{ service.description }}</p>

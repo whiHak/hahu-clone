@@ -39,13 +39,13 @@ const isActive = (href: string) => route.path === href;
 
         <!-- Desktop Navigation -->
         <div
-          class="hidden md:flex w-full items-center justify-end space-x-6 mx-6"
+          class="hidden md:flex w-full items-center justify-end space-x-6 mx-6 dark:text-white"
         >
           <NuxtLink
             v-for="item in navigation"
             :key="item.href"
             :to="item.href"
-            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]  dark:text-white' : 'nav-link text-sm font-[400] transition-colors dark:text-white'"
+            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]  ' : 'nav-link text-sm font-[400] transition-colors '"
           >
             {{ item.name }}
           </NuxtLink>

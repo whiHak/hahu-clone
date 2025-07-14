@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 lg:px-30">
+  <section class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 xl:px-30">
     <div class="max-w-[578px] ml-10 flex-1">
       <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white  mb-6 leading-tight">
         <span>What makes us</span><br />
@@ -28,11 +28,11 @@
         <img src="/images/linkedin_color.svg" alt="LinkedIn" class="w-5 h-5 hover:scale-110 transition" />
       </div>
     </div>
-    <div class=" min-w-[220px] max-w-xl mx-auto mb-12 lg:mt-0 mr-10">
+    <div class=" min-w-[220px] max-w-xl md:mx-auto self-center mb-12 lg:mt-0 mr-10">
       <img src="/images/hahu_robot.svg" alt="Robot" class="relative top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
     </div>
   </section>
-  <section class=" sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row-reverse justify-between items-start py-12 pb-10 px-8 sm:px-30">
+  <section class=" sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse gap-10 lg:flex-row-reverse justify-between items-start py-12 pb-10 px-8 xl:px-30">
     <div class="max-w-xl flex-2">
       <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white  mb-6">
         <span class=" font-bold mb-2">What Choose us</span>
@@ -57,8 +57,8 @@
         HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of.
       </p>
     </div>
-    <div class=" flex-1 min-w-[220px] max-w-xl mb-12 lg:mt-0 md:ml-35">
-      <img src="/images/keyboard.svg" alt="Robot" class="relative md:top-40 top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
+    <div class=" flex-1 items-center flex justify-center min-w-[220px] max-w-xl mb-12 lg:mt-0 md:ml-35">
+      <img src="/images/keyboard.svg" alt="Robot" class="relative md:top-10 xl:top-40 xl:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
     </div>
   </section>
 </template>
