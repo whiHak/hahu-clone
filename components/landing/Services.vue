@@ -21,18 +21,18 @@ const services = ref([
         subscription based relevant vacancy announcement notifications to job
         seekers that sign up on its primary service deployment.
       </p>
-      <div class="overflow-hidden">
+      <div class="overflow-x-hidden h-[400px] sm:h-[650px]">
         <UCarousel
           v-slot="{ item: service }"
           dots
           :items="services"
           :ui="{ 
             container: 'gap-[20px] w-full align',
-            dot: 'w-2 h-1 gap-0 bg-[#777]',
-            dots: 'mtgreen',
+            dots: 'flex gap-2 self-center justify-center',
+            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center',
             item: 'md:basis-1/3'
           }"
-          class="max-w-screen gap-[20px] relative z-0"
+          class="max-w-screen gap-[20px] mx-auto relative z-0"
         >
         <div class="bg-white dark:bg-[#1B2637] rounded-xl mx-auto border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
           <img :src="service.icon" :alt="service.name" class="w-40 h-40 mb-4" />

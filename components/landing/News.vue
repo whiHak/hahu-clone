@@ -57,28 +57,34 @@ const News = ref([
       "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment.",
   },
 ]);
+
+const dotClass = (index: number) => {
+  return index === 0 ? 'bg-[#009688]' : 'bg-gray-300';
+};
 </script>
 
 <template>
   <div class=" bg-[#f8fdfc] dark:bg-[#1B2637]">
-    <section class="flex flex-col items-center sm:container mx-auto px-4 py-8">
+    <section class="flex flex-col items-center justify-center sm:container mx-auto px-4 py-8">
       <h1
         class="text-3xl md:text-4xl font-extrabold text-gray-700 mb-10 dark:text-white text-center"
       >
         News & Events
       </h1>
-      <div class="sm:container self-center overflow-hidden">
+      <div class="sm:container overflow-x-hidden h-[670px] sm:h-[650px]">
         <UCarousel
-          v-slot="{ item: news }"
-          dots
+          v-slot="{ item: news, index }"
           :items="News"
           :ui="{
-            container: 'gap-[20px] w-[980px]',
-            item: 'md:basis-1/3',
+            container: 'gap-[20px] md:w-[980px] h-max align',
+            item: 'sm:basis-1/3',
+            dots: 'flex gap-2 self-center justify-center',
+            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center'
           }"
-          class="w-screen md:ml-[16%] sm:max-w-[1050px] px-5"
+          dots          
+          class="w-screen sm:max-w-[1050px] px-5 flex flex-col align-center mx-auto "
         >
-          <div class="bg-white dark:bg-[#1B2637] rounded-xl min-h-[630px] md:min-h-[570px] xl:min-h-[620px] 2xl:max-w-[360px] border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md flex flex-col items- text- hover:shadow-lg transition cursor-pointer">
+          <div class="bg-white dark:bg-[#1B2637] rounded-xl min-h-[630px] md:min-h-[570px] xl:min-h-[620px] 2xl:max-w-[360px] border-2 border-gray-100 dark:border-[#1B2637] hover:border-[#009688] shadow-md flex flex-col items-center text- hover:shadow-lg transition cursor-pointer">
             <img :src="news.icon" :alt="news.name" class="max-w-[360px] md:max-w-[560px] w-full h-50 mb-4 min-h-[300px] rounded-t-xl object-cover" />
             <div class="px-6 flex flex-col gap-3 items-start justify-between h-full max-w-[360px] md:max-w-[560px]">
                 <span class="bg-[#6EC8C0] text-[#333] text-xs rounded-full self-start px-3 py-1 font-semibold flex items-center transition cursor-pointer">
@@ -95,7 +101,7 @@ const News = ref([
           </div>
         </UCarousel>
       </div>
-      <button class="bg-teal-600 mt-10 hover:bg-teal-700 text-white text-sm rounded-md px-5 py-2 font-semibold flex items-center gap-2 transition cursor-pointer">
+      <button class="bg-teal-600 mt-7 hover:bg-teal-700 text-white text-sm rounded-md px-5 py-2 font-semibold flex items-center gap-2 transition cursor-pointer self-center">
           More Blogs
           <Icon name="lucide:link" class="w-5 h-5 mt-1 ml-2" />
         </button>

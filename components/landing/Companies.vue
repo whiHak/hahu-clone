@@ -52,7 +52,7 @@ const companies = ref([
             dots: 'mb-5',
             item: 'basis-1/10',
           }"
-          class="w-full  gap-0 relative z-0"
+          class="w-full  gap-0 relative z-0 "
         >
         <div class="bg-white w-38 h-38 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
           <img :src="company.icon" :alt="company.name" class="w-full mb-4" />

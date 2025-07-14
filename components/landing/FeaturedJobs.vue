@@ -103,7 +103,7 @@ const jobs = ref([
         Explore our handpicked selection of top job openings. Find your dream
         career match today.
       </p>
-      <div class="relative rounded-2xl overflow-hidden">
+      <div class="relative rounded-2xl overflow-x-hidden h-[550px] sm:h-[650px]">
         <div
           class="absolute inset-y-0 left-0 w-70 bg-gradient-to-r from-[#ECEDEF] dark:from-[#02201D] to-transparent z-100 pointer-events-none"
         ></div>
@@ -117,8 +117,8 @@ const jobs = ref([
           :items="jobs"
           :autoplay="{ delay: 3000 }"
           :ui="{
-            dot: 'w-2 h-1 gap-0 bg-[#777]',
-            dots: 'mb-5',
+            dots: 'flex gap-2 self-center justify-center',
+            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center',
             item: 'basis-1/4',
           }"
           class="w-full max-w-full gap-[20px] relative z-0"

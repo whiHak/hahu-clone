@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 xl:px-30">
+  <section class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 xl:px-20">
     <div class="max-w-[578px] ml-10 flex-1">
       <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white  mb-6 leading-tight">
         <span>What makes us</span><br />
@@ -28,13 +28,13 @@
         <img src="/images/linkedin_color.svg" alt="LinkedIn" class="w-5 h-5 hover:scale-110 transition" />
       </div>
     </div>
-    <div class=" min-w-[220px] max-w-xl md:mx-auto self-center mb-12 lg:mt-0 mr-10">
+    <div class=" min-w-[220px] max-w-xl md:mx-auto self-center mb-12 lg:mt-0 mx-5">
       <img src="/images/hahu_robot.svg" alt="Robot" class="relative top-10 lg:-translate-y-1 hover:scale-110 transition duration-300 md:w-[480px] w-[380px] z-20" />
     </div>
   </section>
-  <section class=" sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse gap-10 lg:flex-row-reverse justify-between items-start py-12 pb-10 px-8 xl:px-30">
+  <section class=" sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse gap-10 lg:flex-row-reverse justify-between items-start py-12 pb-10 px-8 xl:px-20">
     <div class="max-w-xl flex-2">
-      <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white  mb-6">
+      <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white mb-6">
         <span class=" font-bold mb-2">What Choose us</span>
         <span class="text-teal-600 text-[25px] font-bold">Convenience</span>        
         <span class="text-teal-600 text-sm font-bold">You no longer look for jobs, jobs look for you</span>
