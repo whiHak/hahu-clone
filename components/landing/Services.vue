@@ -29,7 +29,7 @@ const services = ref([
           :ui="{ 
             container: 'gap-[20px] w-full align',
             dots: 'flex gap-2 self-center justify-center',
-            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center',
+            dot: 'bg-[#009688] w-3 h-1 rounded-[0px] focus:bg-[#009688] gap-2 self-center justify-center',
             item: 'md:basis-1/3 ml-2 sm:-ml-2'
           }"
           class="max-w-screen gap-[20px] mx-auto relative z-0"

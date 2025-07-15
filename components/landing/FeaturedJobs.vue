@@ -118,7 +118,7 @@ const jobs = ref([
           :autoplay="{ delay: 3000 }"
           :ui="{
             dots: 'flex gap-2 self-center justify-center',
-            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center',
+            dot: 'bg-[#009688] w-3 h-1 rounded-[0px] focus:bg-[#009688] gap-2 self-center justify-center',
             item: 'basis-1/4',
           }"
           class="w-full max-w-full gap-[20px] relative z-0"

@@ -39,7 +39,7 @@ const openModal = computed({
   >
     <Dialog
       as="div"
-      class="fixed inset-0 mx-auto w-full md:w-11/12 flex items-center justify-center bg-opacity-30"
+      class="fixed inset-0 mx-auto w-11/12 py-5 flex items-center justify-center bg-opacity-30"
       @close="openModal = false"
     >
     <div class="fixed inset-0 backdrop-blur-xs" aria-hidden="true" />

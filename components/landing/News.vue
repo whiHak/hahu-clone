@@ -79,7 +79,7 @@ const dotClass = (index: number) => {
             container: 'gap-[20px] md:w-[980px] h-max align',
             item: 'sm:basis-1/3',
             dots: 'flex gap-2 self-center justify-center',
-            dot: 'bg-[#009688] w-5 h-1 rounded-0 focus:bg-[#009688] gap-2 self-center justify-center'
+            dot: 'bg-[#009688] w-3 h-1 rounded-[0px] focus:bg-[#009688] gap-2 self-center justify-center'
           }"
           dots          
           class="w-screen sm:max-w-[1050px] px-5 flex flex-col align-center mx-auto "

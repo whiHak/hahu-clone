@@ -3,7 +3,7 @@ export const navigation = [
     { name: 'About', href: '#about' },
     { name: 'Jobs', href: '/jobs' },
     { name: 'Post Vacancy', href: '#post-vacancy' },
-    { name: 'Contacts', href: '/contacts' },
+    { name: 'Contacts', href: 'https://www.hahujobs.io/#contact' },
 ]
 
 export const mobNavigation = [

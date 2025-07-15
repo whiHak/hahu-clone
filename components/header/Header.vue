@@ -35,104 +35,116 @@ const jobCategories = ref([
     name: 'Natural Science',
     icon: '/images/engineering.svg',
     positions: 33,
-    description: 'Natural science concerned with the description, prediction, and unde...'
+    description: 'Natural science concerned with the description, prediction, and unde...',
+    sector: 'Natural Science',
+    link: '/jobs?sid=natural-science&page=1'
   },
   {
     name: 'Hospitality',
     icon: '/images/business.png',
     positions: 26,
-    description: 'Operations of hotels, restaurants, cruise ships, amusement parks, de...'
+    description: 'Operations of hotels, restaurants, cruise ships, amusement parks, de...',
+    sector: 'Hospitality',
+    link: '/jobs?sid=hospitality&page=1'
   },
   {
     name: 'Finance',
     icon: '/images/hahu_featured.svg',
     positions: 168,
-    description: 'General management principles to financial resources of the enterpri...'
+    description: 'General management principles to financial resources of the enterpri...',
+    sector: 'Finance',
+    link: '/jobs?sid=finance&page=1'
   },
   {
     name: 'Manufacturing',
     icon: '/images/downward-arrow.svg',
     positions: 0,
-    description: 'Manufacturing is a production sector for all products. This sector c...'
+    description: 'Manufacturing is a production sector for all products. This sector c...',
+    sector: 'Manufacturing',
+    link: '/jobs?sid=manufacturing&page=1'
   },
   {
     name: 'Business',
     icon: '/images/bookmark.png',
     positions: 260,
-    description: 'Aspects of overseeing and supervising business operations. Business ...'
+    description: 'Aspects of overseeing and supervising business operations. Business ...',
+    sector: 'Business',
+    link: '/jobs?sid=business&page=1'
   },
   {
     name: 'Low and Medium Skilled...',
     icon: '/images/job-type-arrow.svg',
     positions: 59,
-    description: 'Does not require completing a college degree or specialized training...'
+    description: 'Does not require completing a college degree or specialized training...',
+    sector: 'Low and Medium Skilled...',
+    link: '/jobs?sid=low-and-medium-skilled&page=1'
   },
   {
     name: 'Legal Services',
     icon: '/images/keyboard.svg',
     positions: 24,
-    description: 'services involving legal or law related matters like issue of legal ...'
+    description: 'services involving legal or law related matters like issue of legal ...',
+    sector: 'Legal Services',
+    link: '/jobs?sid=legal-services&page=1'
   },
   {
     name: 'Social Science',
     icon: '/images/news-2.jpeg',
     positions: 32,
-    description: 'Social science focus on the study of society and the relationship am...'
+    description: 'Social science focus on the study of society and the relationship am...',
+    sector: 'Social Science',
+    link: '/jobs?sid=social-science&page=1'
   },
   {
     name: 'Creative Arts',
     icon: '/images/news-6.png',
     positions: 23,
-    description: 'Human creative skill and imagination, typically in a visual form suc...'
+    description: 'Human creative skill and imagination, typically in a visual form suc...',
+    sector: 'Creative Arts',
+    link: '/jobs?sid=creative-arts&page=1'
   },
   {
     name: 'Transportation & Logistics',
     icon: '/images/business.png',
     positions: 29,
-    description: 'Involves both internal and external distribution networks which incl...'
+    description: 'Involves both internal and external distribution networks which incl...',
+    sector: 'Transportation & Logistics',
+    link: '/jobs?sid=transportation-and-logistics&page=1'
   },
   {
     name: 'ICT',
     icon: '/images/engineering.svg',
     positions: 45,
-    description: 'ICT sector professionals conduct research, plan, design, support ana...'
+    description: 'ICT sector professionals conduct research, plan, design, support ana...',
+    sector: 'ICT',
+    link: '/jobs?sid=ict&page=1'
   },
   {
     name: 'Education',
     icon: '/images/minab-logo.png',
     positions: 56,
-    description: 'Education is about teaching, learning skills and knowledge. The Educ...'
+    description: 'Education is about teaching, learning skills and knowledge. The Educ...',
+    sector: 'Education',
+    link: '/jobs?sid=education&page=1'
   },
   {
     name: 'Engineering',
     icon: '/images/engineering.svg',
     positions: 161,
-    description: 'Engineering sector is a career that brings together the technologica...'
+    description: 'Engineering sector is a career that brings together the technologica...',
+    sector: 'Engineering',
+    link: '/jobs?sid=engineering&page=1'
   },
   {
     name: 'Health Care',
     icon: '/images/job_application.png',
     positions: 64,
-    description: 'Health care enhance quality of life by enhancing health promotion, d...'
+    description: 'Health care enhance quality of life by enhancing health promotion, d...',
+    sector: 'Health Care',
+    link: '/jobs?sid=health-care&page=1'
   },
 ]);
 
-const getOrder = (name: string) => {
-  switch (name) {
-    case 'Home':
-      return 4;
-    case 'About':
-      return 5;
-    case 'Jobs':
-      return 1;
-    case 'Post Vacancy':
-      return 2;
-    case 'Contacts':
-      return 3;
-    default:
-      return 6; // Default order for other items
-  }
-};
 </script>
 
 <template>
@@ -151,16 +163,15 @@ const getOrder = (name: string) => {
           class="hidden md:flex w-full items-center justify-end space-x-6 mx-6 dark:text-white"
         >
           <NuxtLink
-            v-for="(item, index) in navigation.filter(item => item.name !== 'Jobs')"
+            v-for="(item) in navigation"
             :key="item.href"
-            :to="item.href"
-            :class="isActive(item.href) ? `order-${getOrder(item.name)} ` + ' nav-link text-sm font-semibold transition-colors text-[#009688]' : `order-${getOrder(item.name)} ` + ' nav-link text-sm font-[400] transition-colors '"
+            :to="item.name === 'Jobs'? '#' : item.href"
+            :target="item.name === 'Contacts' ? '_blank': '_self'"
+            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]' : 'nav-link text-sm font-[400] transition-colors '"
+            @click="item.name === 'Jobs' ? toggleModal() : null"
             > 
             {{ item.name }}
           </NuxtLink>
-          <button @click="toggleModal" :class="`order-${getOrder('Jobs')} cursor-pointer mr-6 text-sm  transition-colors`">
-            Jobs
-          </button>
         </div>
 
         <div class="flex items-center ml-auto gap-2">
@@ -205,12 +216,12 @@ const getOrder = (name: string) => {
             <div class="flex items-center justify-center h-full">
               <DialogPanel class="absolute top-15 w-full  backdrop-blur-lg rounded-lg p-6">
                 <nav class="grid gap-y-4 py-2 dark:text-white ">
-                  <NuxtLink 
-                    v-for="item in navigation" 
+                  <NuxtLink  
+                    v-for="(item, index) in navigation" 
                     :key="item.href" 
-                    :to="item.href"
+                    :to="item.name === 'Jobs' ? '#' : item.href"
                     :class="isActive(item.href) ? 'nav-link text-lg font-semibold transition-colors text-[#009688] border-l-4 border-[#009688] pl-2' : 'nav-link text-lg font-[400] transition-color border-l-4 border-[#009688] pl-2'"
-                    @click="isMobileMenuOpen = false"
+                    @click="isMobileMenuOpen = false; item.name === 'Jobs' ? toggleModal() : null" 
                   >
                     {{ item.name }}
                   </NuxtLink>
