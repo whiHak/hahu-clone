@@ -22,7 +22,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     'vue3-carousel-nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'floating-vue/nuxt'
   ],
   colorMode: {
     preference: 'light', // default value of $colorMode.preference

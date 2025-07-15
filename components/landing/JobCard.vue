@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Menu, vTooltip  } from 'floating-vue';
+
   defineProps({
     title: { type: String, default: 'Senior Auto Electrician' },
     company: { type: String, default: 'Ethiopian Engineering...' },
@@ -32,7 +34,22 @@
     <div class="flex items-center gap-2">
       <!-- Company Logo and Name -->
       <div class="flex flex-1 flex-col items-center gap-3 mt-4">
-        <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1" />
+
+        <Menu placement="right" >
+          <button>
+            <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1" />
+          </button>
+          <template #popper>
+            <div class="flex gap-2 w-60 bg-white rounded-lg shadow-lg p-4">
+              <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1 w-10 h-10" />
+              <div class="flex flex-col gap-2">
+                <span class="text-gray-700 dark:text-[#C7CACF] font-semibold text-base leading-tight">{{ company }}</span>
+                <p class="text-sm text-gray-500">Location: {{ location }}</p>
+                <p class="text-sm text-gray-500">Positions: {{positions}}</p>
+              </div>
+            </div>
+          </template>
+        </Menu>
         <div class="flex flex-col">
           <span class="text-gray-700 dark:text-[#C7CACF] font-semibold text-base leading-tight">{{ company }}</span>
         </div>

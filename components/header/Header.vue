@@ -168,7 +168,7 @@ const jobCategories = ref([
             :to="item.name === 'Jobs'? '#' : item.href"
             :target="item.name === 'Contacts' ? '_blank': '_self'"
             :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]' : 'nav-link text-sm font-[400] transition-colors '"
-            @click="item.name === 'Jobs' ? toggleModal() : null"
+            @click="item.name === 'Jobs' && route.path !== '/jobs' ? toggleModal() : null"
             > 
             {{ item.name }}
           </NuxtLink>
@@ -241,6 +241,6 @@ const jobCategories = ref([
           </Dialog>
         </div>
       </nav>
-      <HeaderJobFilterDialog v-model="isJobsFilterOpen" :categories="jobCategories" />
+      <HeaderJobFilterDialog v-model="isJobsFilterOpen" :categories="jobCategories" :toggleModal="toggleModal" />
     </header>
 </template>

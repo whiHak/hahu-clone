@@ -11,9 +11,11 @@ interface Category {
 
 const emit = defineEmits(["update:modelValue"]);
 
+
 const props = defineProps<{
   modelValue: boolean;
   categories: Category[];
+  toggleModal: () => void;
 }>();
 
 const openModal = computed({
@@ -90,6 +92,7 @@ const openModal = computed({
             v-for="(cat, idx) in categories"
             :key="cat.name + idx"
             :category="cat"
+            :toggleModal="toggleModal"
           />
           <img
             src="/images/mascot-half.svg"
