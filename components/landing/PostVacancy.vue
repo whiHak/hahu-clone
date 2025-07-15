@@ -2,8 +2,8 @@
 // No script logic needed for static UI
 </script>
 
-<template>
-  <section class="bg-[#f8fdfc] dark:bg-[#1B2637] px-5 sm:py-14">
+<template >
+  <section id="post-vacancy" class="bg-[#f8fdfc] dark:bg-[#1B2637] px-5 sm:py-14 sm:my-14">
     <div class="sm:container mx-auto flex flex-col md:flex-row items-start justify-center">
     <div class="relative top-10 lg:-translate-y-1 flex-1 flex items-center justify-center sm:min-w-[320px]  min-w-30">
       <img src="/images/job_application.png" alt="Job Application" class="max-w-[380px] self-center w-full" />

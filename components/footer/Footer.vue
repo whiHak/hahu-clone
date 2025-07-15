@@ -3,7 +3,7 @@
 
 <template>
     <footer class="w-full mt-16  font-sans">
-      <div class="sm:container flex flex-wrap justify-between items-start px-16 py-2 gap-10">
+      <div class="sm:container mx-auto flex flex-wrap justify-between items-start px-16 py-2 gap-10">
         <div class="flex flex-col min-w-[60px] max-w-[320px]">
           <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Get Started</div>
           <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Sign up</a>
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="sm:container flex flex-col-reverse md:flex-row flex-wrap justify-between items-center border-t pt-10 border-gray-400 px-16 py-4 mt-2">
+      <div class="sm:container mx-auto flex flex-col-reverse md:flex-row flex-wrap justify-between items-center border-t pt-10 border-gray-400 px-16 py-4 mt-2">
         <div class="flex items-center gap-6">
           <a href="#" class="text-gray-400 text-sm mr-3 dark:text-white">Privacy policy</a>
           <span class="text-gray-400 dark:text-white text-sm">© 2020 - 2025 HaHuJobs. All rights reserved.</span>

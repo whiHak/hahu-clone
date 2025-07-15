@@ -1,8 +1,8 @@
 export const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: 'About', href: '#about' },
     { name: 'Jobs', href: '/jobs' },
-    { name: 'Post Vacancy', href: '/post-vacancy' },
+    { name: 'Post Vacancy', href: '#post-vacancy' },
     { name: 'Contacts', href: '/contacts' },
 ]
 

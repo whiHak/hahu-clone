@@ -2,7 +2,7 @@
 import { mobNavigation, navigation } from "~/constants";
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { Dialog, DialogOverlay, DialogPanel } from '@headlessui/vue';
+import { Dialog, DialogPanel } from '@headlessui/vue';
 
 const isMobileMenuOpen = ref(false);
 
@@ -21,8 +21,118 @@ const toggleTheme = (newTheme: Theme) => {
 };
 
 const route = useRoute();
-console.log(route.fullPath);
-const isActive = (href: string) => route.path === href; 
+const isActive = (href: string) => route.path === href || route.hash === href; 
+
+const isJobsFilterOpen = ref(false)
+
+const toggleModal = () => {
+  isJobsFilterOpen.value = !isJobsFilterOpen.value
+}
+
+// Job sectors/categories array for dialog
+const jobCategories = ref([
+  {
+    name: 'Natural Science',
+    icon: '/images/engineering.svg',
+    positions: 33,
+    description: 'Natural science concerned with the description, prediction, and unde...'
+  },
+  {
+    name: 'Hospitality',
+    icon: '/images/business.png',
+    positions: 26,
+    description: 'Operations of hotels, restaurants, cruise ships, amusement parks, de...'
+  },
+  {
+    name: 'Finance',
+    icon: '/images/hahu_featured.svg',
+    positions: 168,
+    description: 'General management principles to financial resources of the enterpri...'
+  },
+  {
+    name: 'Manufacturing',
+    icon: '/images/downward-arrow.svg',
+    positions: 0,
+    description: 'Manufacturing is a production sector for all products. This sector c...'
+  },
+  {
+    name: 'Business',
+    icon: '/images/bookmark.png',
+    positions: 260,
+    description: 'Aspects of overseeing and supervising business operations. Business ...'
+  },
+  {
+    name: 'Low and Medium Skilled...',
+    icon: '/images/job-type-arrow.svg',
+    positions: 59,
+    description: 'Does not require completing a college degree or specialized training...'
+  },
+  {
+    name: 'Legal Services',
+    icon: '/images/keyboard.svg',
+    positions: 24,
+    description: 'services involving legal or law related matters like issue of legal ...'
+  },
+  {
+    name: 'Social Science',
+    icon: '/images/news-2.jpeg',
+    positions: 32,
+    description: 'Social science focus on the study of society and the relationship am...'
+  },
+  {
+    name: 'Creative Arts',
+    icon: '/images/news-6.png',
+    positions: 23,
+    description: 'Human creative skill and imagination, typically in a visual form suc...'
+  },
+  {
+    name: 'Transportation & Logistics',
+    icon: '/images/business.png',
+    positions: 29,
+    description: 'Involves both internal and external distribution networks which incl...'
+  },
+  {
+    name: 'ICT',
+    icon: '/images/engineering.svg',
+    positions: 45,
+    description: 'ICT sector professionals conduct research, plan, design, support ana...'
+  },
+  {
+    name: 'Education',
+    icon: '/images/minab-logo.png',
+    positions: 56,
+    description: 'Education is about teaching, learning skills and knowledge. The Educ...'
+  },
+  {
+    name: 'Engineering',
+    icon: '/images/engineering.svg',
+    positions: 161,
+    description: 'Engineering sector is a career that brings together the technologica...'
+  },
+  {
+    name: 'Health Care',
+    icon: '/images/job_application.png',
+    positions: 64,
+    description: 'Health care enhance quality of life by enhancing health promotion, d...'
+  },
+]);
+
+const getOrder = (name: string) => {
+  switch (name) {
+    case 'Home':
+      return 4;
+    case 'About':
+      return 5;
+    case 'Jobs':
+      return 1;
+    case 'Post Vacancy':
+      return 2;
+    case 'Contacts':
+      return 3;
+    default:
+      return 6; // Default order for other items
+  }
+};
 </script>
 
 <template>
@@ -41,13 +151,16 @@ const isActive = (href: string) => route.path === href;
           class="hidden md:flex w-full items-center justify-end space-x-6 mx-6 dark:text-white"
         >
           <NuxtLink
-            v-for="item in navigation"
+            v-for="(item, index) in navigation.filter(item => item.name !== 'Jobs')"
             :key="item.href"
             :to="item.href"
-            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]  ' : 'nav-link text-sm font-[400] transition-colors '"
-          >
+            :class="isActive(item.href) ? `order-${getOrder(item.name)} ` + ' nav-link text-sm font-semibold transition-colors text-[#009688]' : `order-${getOrder(item.name)} ` + ' nav-link text-sm font-[400] transition-colors '"
+            > 
             {{ item.name }}
           </NuxtLink>
+          <button @click="toggleModal" :class="`order-${getOrder('Jobs')} cursor-pointer mr-6 text-sm  transition-colors`">
+            Jobs
+          </button>
         </div>
 
         <div class="flex items-center ml-auto gap-2">
@@ -117,5 +230,6 @@ const isActive = (href: string) => route.path === href;
           </Dialog>
         </div>
       </nav>
+      <HeaderJobFilterDialog v-model="isJobsFilterOpen" :categories="jobCategories" />
     </header>
 </template>
