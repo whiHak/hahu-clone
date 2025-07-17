@@ -31,8 +31,10 @@ const debouncedFilterState = useDebounceFn(() => {
   if (isMaxYoe.value) {
     delete query.min_yoe;
     delete query.max_yoe;
+    query.max_yoe_gt = 'true';
   } else {
     if (value.value) {
+      delete query.max_yoe_gt;
       query.min_yoe = value.value[0].toString();
       query.max_yoe = value.value[1].toString();
     }
