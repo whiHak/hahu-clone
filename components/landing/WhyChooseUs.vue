@@ -4,10 +4,10 @@
 
 <template>
   <section id="about" class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 xl:px-20">
-    <div class="max-w-[578px] ml-6 mr-3 flex-1 sm:mt-10">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white sm:mt-10 mb-6 leading-tight">
-        <span>What makes us</span><br />
-        <span>standout from the rest</span>
+    <div class="max-w-[698px] xl:max-w-[578px] ml-6 mr-3 flex-1 sm:mt-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white sm:mt-10 mb-6 ">
+        <span class="leading-tight">What makes us</span><br />
+        <span class="leading-tight">standout from the rest</span>
       </h2>
       <p class="text-gray-700 dark:text-[#C7CACF] md:text-md mb-4">
         HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of looking for a job at all levels of employment. It features vacancy aggregation and posting from various sources as well as enterprises, builds career profiles, apply for jobs, and subscribe to customized alerts for each user via a channel of their choice. HaHuJobs primary also offers standardized classification of all vacancies both sourced from HaHuJobs enterprise services and other manual and digital vacancy platforms.
@@ -33,7 +33,7 @@
     </div>
   </section>
   <section class=" sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse gap-10 lg:flex-row-reverse justify-between items-start py-12 pb-10 px-8 xl:px-20">
-    <div class="max-w-xl flex-2">
+    <div class="max-w-4xl xl:max-w-xl flex-2">
       <div class="flex flex-col text-3xl md:text-4xl  text-gray-700 dark:text-white mb-6">
         <span class=" font-bold mb-2">What Choose us</span>
         <span class="text-teal-600 text-[25px] font-bold">Convenience</span>        

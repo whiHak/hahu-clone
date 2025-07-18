@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="scroll-smooth">
     <NuxtLayout>
         <NuxtPage />
     </NuxtLayout>

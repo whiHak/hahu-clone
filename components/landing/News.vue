@@ -57,10 +57,6 @@ const News = ref([
       "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment.",
   },
 ]);
-
-const dotClass = (index: number) => {
-  return index === 0 ? 'bg-[#009688]' : 'bg-gray-300';
-};
 </script>
 
 <template>

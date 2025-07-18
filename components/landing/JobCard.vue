@@ -23,7 +23,7 @@ import { Menu, vTooltip  } from 'floating-vue';
   <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] h-[500px] flex flex-col gap-3 cursor-pointer">
     <!-- Featured Badge -->
      <div class=" flex gap-2 items-center w-8 h-8 ">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6 relative top-[-22px] md:right-[215px] right-[110px]  md:w-8 md:h-8 group-hover:text-primary text-[#009688]" data-v-ccf21bcf=""><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6 absolute top-0 md:right-[145px] right-[50px]  md:w-8 md:h-8 group-hover:text-primary text-[#009688]" data-v-ccf21bcf=""><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"></path></svg>
        <div class="bg-[#009688] absolute top-[-2px] right-[-1px] flex items-center justify-center w-12 h-8 px-3 py-1 sm:py-0 sm:px-4 sm:w-36 rounded-tr-xl gap-x-1 sm:gap-x-2 rounded-bl-md">
          <img src="/images/hahu_featured.svg" alt="Featured"/>
          <p class="hidden text-white sm:block font-light text-sm">Featured</p>
@@ -31,7 +31,7 @@ import { Menu, vTooltip  } from 'floating-vue';
      </div>
     <!-- Days Left -->
     <div class="absolute top-3 left-3 flex items-center gap-1 text-xs text-teal-600 font-medium">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <svg data-v-ccf21bcf="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-3 md:w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"></path></svg>
       {{ daysLeft }}
     </div>
     <div class="flex items-center gap-2">

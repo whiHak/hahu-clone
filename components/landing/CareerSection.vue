@@ -1,20 +1,20 @@
 <script setup lang="ts">
 
     const sectors = ref([
-        { name: 'Natural Science', icon: '/images/engineering.svg', positions: 31 },
-        { name: 'Business', icon: '/images/engineering.svg', positions: 279 },
-        { name: 'Creative Arts', icon: '/images/engineering.svg', positions: 23 },
-        { name: 'Education', icon: '/images/engineering.svg', positions: 63 },
-        { name: 'Hospitality', icon: '/images/engineering.svg', positions: 22 },
-        { name: 'Low and Medium Skilled Worker', icon: '/images/engineering.svg', positions: 71 },
-        { name: 'Transportation & Logistics', icon: '/images/engineering.svg', positions: 47 },
-        { name: 'Engineering', icon: '/images/engineering.svg', positions: 160 },
-        { name: 'Finance', icon: '/images/engineering.svg', positions: 182 },
+        { name: 'Natural Science', icon: '/images/business.png', positions: 31 },
+        { name: 'Business', icon: '/images/health-care.svg', positions: 279 },
         { name: 'Legal Services', icon: '/images/engineering.svg', positions: 13 },
-        { name: 'ICT', icon: '/images/engineering.svg', positions: 41 },
-        { name: 'Health Care', icon: '/images/engineering.svg', positions: 72 },
-        { name: 'ICT', icon: '/images/engineering.svg', positions: 41 },
-        { name: 'Health Care', icon: '/images/engineering.svg', positions: 72 },
+        { name: 'Creative Arts', icon: '/images/legal-service.svg', positions: 23 },
+        { name: 'Education', icon: '/images/engineering.svg', positions: 63 },
+        { name: 'Hospitality', icon: '/images/creative-art.svg', positions: 22 },
+        { name: 'Low and Medium Skilled Worker', icon: '/images/natural-science.svg', positions: 71 },
+        { name: 'Engineering', icon: '/images/transport-and-logistics.svg', positions: 160 },
+        { name: 'Transportation & Logistics', icon: '/images/engineering.svg', positions: 47 },
+        { name: 'Finance', icon: '/images/engineering.svg', positions: 182 },
+        { name: 'ICT', icon: '/images/finance.svg', positions: 41 },
+        { name: 'Health Care', icon: '/images/business.png', positions: 72 },
+        { name: 'ICT', icon: '/images/health-care.svg', positions: 41 },
+        { name: 'Health Care', icon: '/images/natural-science.svg', positions: 72 },
       ])
 </script>
 

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useDebounceFn} from '@vueuse/core'
 
 const searchTerms = ref("");
 const selectedPosition = ref("");
@@ -7,128 +8,138 @@ const selectedCity = ref("");
 const router=useRouter()
 const route=useRoute()
 
+const debounceFilterState = useDebounceFn(() => {
+  let query: any = { ...route.query };
+  const activeFilters: string[] = [];
+
+  console.log(searchTerms.value)
+  if (searchTerms.value) activeFilters.push('search');
+  if (selectedPosition.value) activeFilters.push('pid');
+  if (selectedSector.value) activeFilters.push('sid');
+  if (selectedCity.value) activeFilters.push('cid');
+
+  query.search = searchTerms.value;
+  query.pid = selectedPosition.value;
+  query.sid = selectedSector.value;
+  query.cid = selectedCity.value;
+
+  router.push({ query });
+}, 500);
 
 const updateSearchTerm = (value: string) => {
   searchTerms.value = value;
-  router.push({
-    query: {
-      ...route.query,
-      search: searchTerms.value
-    }
-  })
+  console.log(searchTerms.value)
+  debounceFilterState();
 }
 const updateSelectedPosition = (value: string) => {
   selectedPosition.value = value;
-  router.push({
-    query: {
-      ...route.query,
-      position: selectedPosition.value
-    }
-  })
+  debounceFilterState();
 }
 const updateSelectedSector = (value: string) => { 
   selectedSector.value = value;
+  debounceFilterState();
 }
 const onUpdateSelectedCity = (value: string) => {
   selectedCity.value = value;
+  debounceFilterState();
 }
 
 
-// const jobs = ref([
-//   {
-//     title: "Senior Auto Electrician",
-//     company: "Ethiopian Engineering...",
-//     companyLogo: "/images/job-banner.png",
-//     sector: "Low and Medium Skilled Worker",
-//     category: "Auto Mechanical Skilled Worker",
-//     location: "Addis Ababa",
-//     experience: "6 years",
-//     positions: "2 Positions",
-//     type: "Full Time",
-//     summary:
-//       "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
-//     daysLeft: "3 Days Left",
-//     views: "10k",
-//     sectorIcon: "/images/business.png",
-//     locationIcon: "/images/engineering.svg",
-//   },
-//   {
-//     title: "Finance Manager",
-//     company: "ABC Finance PLC",
-//     companyLogo: "/images/job-banner.png",
-//     sector: "Finance sector",
-//     category: "Financial Services",
-//     location: "Addis Ababa",
-//     experience: "5 years",
-//     positions: "1 Position",
-//     type: "Full Time",
-//     summary:
-//       "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
-//     daysLeft: "5 Days Left",
-//     views: "2k",
-//     sectorIcon: "/images/business.png",
-//     locationIcon: "/images/engineering.svg",
-//   },
-//   {
-//     title: "Senior Auto Electrician",
-//     company: "Ethiopian Engineering...",
-//     companyLogo: "/images/job-banner-2.png",
-//     sector: "Low and Medium Skilled Worker",
-//     category: "Auto Mechanical Skilled Worker",
-//     location: "Addis Ababa",
-//     experience: "6 years",
-//     positions: "2 Positions",
-//     type: "Full Time",
-//     summary:
-//       "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
-//     daysLeft: "3 Days Left",
-//     views: "10k",
-//     sectorIcon: "/images/business.png",
-//     locationIcon: "/images/engineering.svg",
-//   },
-//   {
-//     title: "Senior Auto Electrician",
-//     company: "Ethiopian Engineering...",
-//     companyLogo: "/images/job-banner-3.jpg",
-//     sector: "Low and Medium Skilled Worker",
-//     category: "Auto Mechanical Skilled Worker",
-//     location: "Addis Ababa",
-//     experience: "6 years",
-//     positions: "2 Positions",
-//     type: "Full Time",
-//     summary:
-//       "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
-//     daysLeft: "3 Days Left",
-//     views: "10k",
-//     sectorIcon: "/images/business.png",
-//     locationIcon: "/images/engineering.svg",
-//   },
-//   {
-//     title: "Senior Auto Electrician",
-//     company: "Ethiopian Engineering...",
-//     companyLogo: "/images/job-banner.png",
-//     sector: "Low and Medium Skilled Worker",
-//     category: "Auto Mechanical Skilled Worker",
-//     location: "Addis Ababa",
-//     experience: "6 years",
-//     positions: "2 Positions",
-//     type: "Full Time",
-//     summary:
-//       "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
-//     daysLeft: "3 Days Left",
-//     views: "10k",
-//     sectorIcon: "/images/business.png",
-//     locationIcon: "/images/engineering.svg",
-//   },
-// ]);
+const jobs = ref([
+  {
+    title: "Senior Auto Electrician",
+    company: "Ethiopian Engineering...",
+    companyLogo: "/images/job-banner.png",
+    sector: "Low and Medium Skilled Worker",
+    category: "Auto Mechanical Skilled Worker",
+    location: "Addis Ababa",
+    experience: "6 years",
+    positions: "2 Positions",
+    type: "Full Time",
+    summary:
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
+    daysLeft: "3 Days Left",
+    views: "10k",
+    sectorIcon: "/images/business.png",
+    locationIcon: "/images/engineering.svg",
+  },
+  {
+    title: "Finance Manager",
+    company: "ABC Finance PLC",
+    companyLogo: "/images/job-banner.png",
+    sector: "Finance sector",
+    category: "Financial Services",
+    location: "Addis Ababa",
+    experience: "5 years",
+    positions: "1 Position",
+    type: "Full Time",
+    summary:
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
+    daysLeft: "5 Days Left",
+    views: "2k",
+    sectorIcon: "/images/business.png",
+    locationIcon: "/images/engineering.svg",
+  },
+  {
+    title: "Senior Auto Electrician",
+    company: "Ethiopian Engineering...",
+    companyLogo: "/images/job-banner-2.png",
+    sector: "Low and Medium Skilled Worker",
+    category: "Auto Mechanical Skilled Worker",
+    location: "Addis Ababa",
+    experience: "6 years",
+    positions: "2 Positions",
+    type: "Full Time",
+    summary:
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
+    daysLeft: "3 Days Left",
+    views: "10k",
+    sectorIcon: "/images/business.png",
+    locationIcon: "/images/engineering.svg",
+  },
+  {
+    title: "Senior Auto Electrician",
+    company: "Ethiopian Engineering...",
+    companyLogo: "/images/job-banner-3.jpg",
+    sector: "Low and Medium Skilled Worker",
+    category: "Auto Mechanical Skilled Worker",
+    location: "Addis Ababa",
+    experience: "6 years",
+    positions: "2 Positions",
+    type: "Full Time",
+    summary:
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
+    daysLeft: "3 Days Left",
+    views: "10k",
+    sectorIcon: "/images/business.png",
+    locationIcon: "/images/engineering.svg",
+  },
+  {
+    title: "Senior Auto Electrician",
+    company: "Ethiopian Engineering...",
+    companyLogo: "/images/job-banner.png",
+    sector: "Low and Medium Skilled Worker",
+    category: "Auto Mechanical Skilled Worker",
+    location: "Addis Ababa",
+    experience: "6 years",
+    positions: "2 Positions",
+    type: "Full Time",
+    summary:
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
+    daysLeft: "3 Days Left",
+    views: "10k",
+    sectorIcon: "/images/business.png",
+    locationIcon: "/images/engineering.svg",
+  },
+]);
 
-const jobs = ref([{}])
+
+// const jobs = ref([{}])
 
 </script>
 
 <template>
   <div class="w-full lg:w-9/12 2xl:w-10/12 ">
-    <h1 v-if="searchTerms?.length > 0" class="h-56">{{searchTerms}}</h1>
     <!-- Filter -->
    <JobsFilter  @updateSearchTerm="updateSearchTerm" @updateSelectedPosition="updateSelectedPosition" @updateSelectedSector="updateSelectedSector" @updateSelectedCity="onUpdateSelectedCity" />
 

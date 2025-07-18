@@ -4,7 +4,7 @@
 
 <template>
     <footer class="w-full pt-10  bg-[#f8fdfc] dark:bg-[#1B2637]">
-      <div class="sm:container mx-auto flex flex-wrap justify-between items-start px-16 py-2 gap-10">
+      <div class="sm:container mx-auto flex flex-wrap justify-between items-center px-16 py-2 gap-10">
         <div class="flex flex-col min-w-[60px] max-w-[320px]">
           <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Get Started</div>
           <NuxtLink href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Sign up</NuxtLink>
@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col items-center min-w-[120px] md:min-w-[320px] max-w-[420px] sm:items-start">
           <img src="/images/minab-logo.png" alt="Minab Logo" class="w-40 mb-2" />
-          <p class="text-gray-700 dark:text-white text-sm mt-1 font-medium text-wrap w-72 md:w-120 leading-relaxed">
+          <p class="text-gray-700 dark:text-white text-sm mt-1 font-medium text-wrap w-72 md:w-140 ">
             HaHuJobs is a cloud based product owned and manged by a technology consulting firm called Minab IT solutions PLC. Minab was founded in 2014 and has an extensive experience in software development for the past nine years.
           </p>
         </div>

@@ -4,13 +4,13 @@
 
 <template >
   <section id="post-vacancy" class="bg-[#f8fdfc] dark:bg-[#1B2637] px-5 sm:py-14">
-    <div class="sm:container mx-auto flex flex-col md:flex-row items-start justify-center">
-    <div class="relative top-10 lg:-translate-y-1 flex-1 flex items-center justify-center sm:min-w-[320px]  min-w-30">
-      <img src="/images/job_application.png" alt="Job Application" class="max-w-[380px] self-center w-full" />
+    <div class="sm:container mx-auto flex flex-col lg:flex-row items-start justify-center">
+    <div class="relative top-10 lg:-translate-y-1 flex-1 flex items-center justify-center sm:min-w-[320px]  min-w-30 w-full xl:w-1/2 sm:px-10">
+      <img src="/images/post.svg" alt="Job Application" class="max-w-[380px] md:max-w-[480px] lg:max-w-[380px] self-center w-full" />
     </div>
-    <div class="flex-1 gap-10 max-w-2xl md:ml-16 mt-10 md:mt-0">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 text-center sm:text-left dark:text-white mb-4">Post vacancy</h2>
-      <p class="text-gray-700 dark:text-[#C7CACF] text-base md:text-sm mb-10 text-center sm:text-left">
+    <div class="flex-1 gap-10 max-w-2xl lg:ml-16 mt-10 lg:mt-0">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 text-center lg:text-left dark:text-white mb-4">Post vacancy</h2>
+      <p class="text-gray-700 dark:text-[#C7CACF] text-base lg:text-sm mb-10 w-full md:w-95 lg:w-full text-center self-center md:ml-38 lg:ml-0 lg:text-left">
         HaHuJobs offers dedicated enterprise cloud services for a full human resource management platform with an affordable price package. Posting vacancy is completely free, and only requires to follow the below listed steps.
       </p>
       <div class=" grid sm:grid-cols-2 gap-3  mb-8">

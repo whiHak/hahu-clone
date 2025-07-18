@@ -37,7 +37,7 @@ const emit = defineEmits(['updateSearchTerm', 'updateSelectedPosition', 'updateS
           class="hover:ring-1 hover:ring-[#009688] hover:bg-white focus:ring-0 border-1 border-gray-300"
           @focus="isSearchOpen = !isSearchOpen; emit('updateSearchTerm', searchTerm)"
           @blur="isSearchOpen = false ; emit('updateSearchTerm', '')"
-          @update:model-value="emit('updateSearchTerm', searchTerm)"
+          @keyup.enter="emit('updateSearchTerm', searchTerm)"
         >
           <template #trailing>
             <UIcon name="i-lucide-x" class="text-gray-500 dark:text-gray-400 ml-2" />
@@ -100,7 +100,7 @@ const emit = defineEmits(['updateSearchTerm', 'updateSelectedPosition', 'updateS
                     }"
                     class=""
                     @focus="true"
-                    @update:model-value="emit('updateSelectedPosition', selectedPosition)"
+                    @keyup.enter="emit('updateSelectedPosition', selectedPosition)"
                 />
                 <div v-for="i in 7" :key="i" class=" text-sm font-bold bg-white hover:bg-gray-300 border-b-1 border-gray-300 p-1">
                     {{ "Search Result" }}
@@ -148,7 +148,7 @@ const emit = defineEmits(['updateSearchTerm', 'updateSelectedPosition', 'updateS
                     }"
                     class=""
                     @focus="true"
-                    @update:model-value="emit('updateSelectedSector', selectedSector)"
+                    @keyup.enter="emit('updateSelectedSector', selectedSector)"
                 />
                 <div v-for="i in 7" :key="i" class=" text-sm font-bold bg-white hover:bg-gray-300 border-b-1 border-gray-300 p-1">
                     {{ "Search Result" }}
@@ -196,7 +196,7 @@ const emit = defineEmits(['updateSearchTerm', 'updateSelectedPosition', 'updateS
                     }"
                     class=""
                     @focus="true"
-                    @update:model-value="emit('updateSelectedCity', selectedCity)"
+                    @keyup.enter="emit('updateSelectedCity', selectedCity)"
                 />
                 <div v-for="i in 7" :key="i" class=" text-sm font-bold bg-white hover:bg-gray-300 border-b-1 border-gray-300 p-1">
                     {{ "Search Result" }}

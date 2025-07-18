@@ -2,9 +2,9 @@
 import { ref } from 'vue';
 
 const services = ref([
-    { name: 'Natural Science', icon: '/images/job-banner.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
-    { name: 'Business', icon: '/images/job-banner-2.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
-    { name: 'Creative Arts', icon: '/images/engineering.svg', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+  { name: 'Natural Science', icon: '/images/build_career_profile.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+    { name: 'Business', icon: '/images/job_application.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
+    { name: 'Creative Arts', icon: '/images/vacancy_notification.png', description: "HaHuJobs offers digital career profiling, job application and subscription based relevant vacancy announcement notifications to job seekers that sign up on its primary service deployment." },
 ])
 </script>
 

@@ -182,7 +182,7 @@ const jobCategories = ref([
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"
-              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF] p-3 sm:p-0"
+              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF] p-[11px] mb-1 sm:p-0"
             />
           </button>
 
@@ -208,7 +208,7 @@ const jobCategories = ref([
               class="mr-2"
               @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
-              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-6 w-10 p-4 dark:text-white" />
+              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-6 w-10 p-[14px] dark:text-white" />
             </button>
           </div>
           <!-- Mobile Navigation Dialog -->
