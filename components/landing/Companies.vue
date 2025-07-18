@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const hovered = ref(false);
 const companies = ref([
         { name: 'Natural Science', icon: '/images/job-banner.png'},
         { name: 'Business', icon: '/images/job-banner-2.png'},
@@ -44,17 +45,16 @@ const companies = ref([
           loop
           auto-scroll
           :items="companies"
-          :autoplay="{ 
+          :autoplay="hovered ? false : { 
             delay: 7000,
           }"
           :ui="{
-            dot: 'w-2 h-1 gap-0 bg-[#777]',
-            dots: 'mb-5',
             item: 'basis-1/10',
           }"
-          class="w-full  gap-0 relative z-0 "
+          class="w-full  gap-0 relative z-0 transition-all duration-1000 ease-in-out "
         >
-        <div class="bg-white w-38 h-38 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
+        <div  @mouseenter="hovered=true"
+        @mouseleave="hovered=false" class="bg-white w-38 h-38 rounded-xl shadow-md p-4 flex flex-col items-center justify-center text-center hover:shadow-lg transition cursor-pointer">
           <img :src="company.icon" :alt="company.name" class="w-full mb-4" />
         </div>
         </UCarousel>

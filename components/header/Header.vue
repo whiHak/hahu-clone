@@ -167,7 +167,7 @@ const jobCategories = ref([
             :key="item.href"
             :to="item.name === 'Jobs'? '#' : item.href"
             :target="item.name === 'Contacts' ? '_blank': '_self'"
-            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]' : 'nav-link text-sm font-[400] transition-colors '"
+            :class="isActive(item.href) ? 'nav-link text-sm font-semibold transition-colors text-[#009688]' : 'nav-link hover:text-[#009688] hover:scale-105 transition-all duration-300 text-sm font-[400]  '"
             @click="item.name === 'Jobs' && route.path !== '/jobs' ? toggleModal() : null"
             > 
             {{ item.name }}
@@ -182,7 +182,7 @@ const jobCategories = ref([
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"
-              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF]"
+              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF] p-3"
             />
           </button>
 
@@ -208,13 +208,13 @@ const jobCategories = ref([
               class="mr-2"
               @click="isMobileMenuOpen = !isMobileMenuOpen"
             >
-              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-7 w-7 dark:text-white" />
+              <Icon :name="isMobileMenuOpen ? 'lucide:x' : 'lucide:menu'" class="h-6 w-10 p-4 dark:text-white" />
             </button>
           </div>
           <!-- Mobile Navigation Dialog -->
           <Dialog :open="isMobileMenuOpen"  @close="setIsOpen" class="fixed text-[#697280] w-full inset-0 z-50 md:hidden">
             <div class="flex items-center justify-center h-full">
-              <DialogPanel class="absolute top-15 w-full  backdrop-blur-lg rounded-lg p-6">
+              <DialogPanel class="absolute top-15 w-full  backdrop-blur-lg rounded-lg py-6">
                 <nav class="grid gap-y-4 py-2 dark:text-white ">
                   <NuxtLink  
                     v-for="(item, index) in navigation" 

@@ -4,8 +4,8 @@
 
 <template>
   <section id="about" class="sm:container mx-auto dark:bg-[#02201D] flex flex-col-reverse lg:flex-row justify-between items-start sm:pt-12 xl:px-20">
-    <div class="max-w-[578px] ml-10 flex-1 sm:mt-10">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white sm:mt-10  mb-6 leading-tight">
+    <div class="max-w-[578px] ml-6 mr-3 flex-1 sm:mt-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-700 dark:text-white sm:mt-10 mb-6 leading-tight">
         <span>What makes us</span><br />
         <span>standout from the rest</span>
       </h2>

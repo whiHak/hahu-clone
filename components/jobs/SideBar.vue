@@ -13,7 +13,6 @@ const isPartTimeActive = ref(false);
 const route = useRoute();
 const router = useRouter();
 const debouncedFilterState = useDebounceFn(() => {
-  console.log(filterState.value);
   let query: any = { ...route.query };
   const activeFilters: string[] = [];
 
@@ -90,7 +89,6 @@ watch(filterState, debouncedFilterState);
           label="Additional Filters"
           as="div"
           color="neutral"
-          variant="subtle"
           size="md"
           :trailing-icon="
             isOpen ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'
@@ -99,7 +97,7 @@ watch(filterState, debouncedFilterState);
           block
           @click="isOpen = !isOpen"
           :ui="{
-            base: 'border-0 bg-transparent font-bold outline-0 cursor-pointer',
+            base: 'border-0 bg-transparent font-bold outline-0 cursor-pointer hover:bg-transparent',
             trailingIcon: 'text-[#009688] text-lg',
           }"
         />

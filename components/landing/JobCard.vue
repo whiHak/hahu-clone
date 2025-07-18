@@ -20,11 +20,14 @@ import { Menu, vTooltip  } from 'floating-vue';
 </script>
 
 <template>
-  <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] h-[500px] flex flex-col gap-4 cursor-pointer">
+  <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] h-[500px] flex flex-col gap-3 cursor-pointer">
     <!-- Featured Badge -->
-     <div class="absolute top-0 right-5 flex gap-2 items-center w-8 h-8 z-10">
-       <img src="/images/bookmark.png" alt="Featured" class="w-4 h-4" />
-       <img src="/images/hahu_featured.svg" alt="Featured"/>
+     <div class=" flex gap-2 items-center w-8 h-8 ">
+       <img src="/images/bookmark.png" alt="Featured" class="w-4 h-4 absolute flex items-center justify-center px-4 text-xs text-center top-2 sm:top-0 right-10 sm:right-32 gap-x-2 md:text-base border-primary" />
+       <div class="bg-[#009688] absolute top-[-2px] right-[-1px] flex items-center justify-center w-12 h-8 px-3 py-1 sm:py-0 sm:px-4 sm:w-36 rounded-tr-xl gap-x-1 sm:gap-x-2 rounded-bl-md">
+         <img src="/images/hahu_featured.svg" alt="Featured"/>
+         <p class="hidden text-white sm:block font-light text-sm">Featured</p>
+       </div>
      </div>
     <!-- Days Left -->
     <div class="absolute top-3 left-3 flex items-center gap-1 text-xs text-teal-600 font-medium">
@@ -37,7 +40,7 @@ import { Menu, vTooltip  } from 'floating-vue';
 
         <Menu placement="right" >
           <button>
-            <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1" />
+            <img :src="companyLogo" alt="EEC Logo" class=" rounded p-1 md:h-[60px] object-contain w-20 md:w-32 mb-3 " />
           </button>
           <template #popper>
             <div class="flex gap-2 w-60 bg-white rounded-lg shadow-lg p-4">
@@ -102,11 +105,11 @@ import { Menu, vTooltip  } from 'floating-vue';
     <!-- Footer -->
     <div class="flex items-center justify-between mt-2 text-xs text-gray-400">
       <span class="flex items-center gap-1">
-        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 1116 0A8 8 0 012 10zm8-3a3 3 0 100 6 3 3 0 000-6z" /></svg>
+        <svg data-v-ccf21bcf="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 md:w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg>
         {{ views }}
       </span>
       <button class="hover:text-[#009688] transition">
-        <img src="/images/share.png" alt="Share" class="w-5 h-5" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 md:w-6 md:h-6 outlineReactiveIcon" data-v-ccf21bcf=""><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path></svg>
       </button>
     </div>
   </div>

@@ -103,7 +103,7 @@ const dotClass = (index: number) => {
       </div>
       <button class="bg-teal-600 mt-7 hover:bg-teal-700 text-white text-sm rounded-md px-5 py-2 font-semibold flex items-center gap-2 transition cursor-pointer self-center">
           More Blogs
-          <Icon name="lucide:link" class="w-5 h-5 mt-1 ml-2" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="ml-2 w-4 h-4 md:w-5 md:h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
         </button>
     </section>
   </div>

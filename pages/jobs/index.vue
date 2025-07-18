@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const isOpen = ref(true);
-const value = ref([0, 3]);
-const isChecked = ref(false);
 </script>
 
 <template>
-  <div class="sm:container mx-auto md:px-8">
+  <div class="sm:container mx-auto md:px-8 flex flex-col lg:flex-row">
     <!-- Sidebar -->
-    <JobsSideBar :isOpen="isOpen" />
+    <JobsSideBar />
+
+    <!-- Main Content -->
+     <JobsMainContent/>
   </div>
 </template>
 

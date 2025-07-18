@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <footer class="w-full mt-16  font-sans">
+    <footer class="w-full pt-10  bg-[#f8fdfc]">
       <div class="sm:container mx-auto flex flex-wrap justify-between items-start px-16 py-2 gap-10">
         <div class="flex flex-col min-w-[60px] max-w-[320px]">
           <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Get Started</div>

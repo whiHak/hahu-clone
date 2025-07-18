@@ -28,7 +28,7 @@ const jobs = ref([
     positions: "1 Position",
     type: "Full Time",
     summary:
-      "Degree in Finance or related field with 5 years experience in financial management.",
+      "TVET Level IV in Auto Electrician or in a related field of study with relevant work experience, out of which 2 years in a similar role Duties and Responsibilitie...",
     daysLeft: "5 Days Left",
     views: "2k",
     sectorIcon: "/images/business.png",
