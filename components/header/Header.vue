@@ -182,7 +182,7 @@ const jobCategories = ref([
           >
             <Icon
               :name="isDark ? 'lucide:sun' : 'lucide:moon'"
-              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF] p-3"
+              class="sm:h-4 sm:w-4 h-6 w-6 dark:text-[#C7CACF] p-3 sm:p-0"
             />
           </button>
 

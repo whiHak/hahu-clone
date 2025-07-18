@@ -15,7 +15,7 @@ const services = ref([
         Services
       </h1>
       <p
-        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mt-5 mb-8 text-wrap max-w-xl text-center"
+        class="text-sm font-medium text-gray-600 dark:text-[#C7CACF] mt-5 mb-8 text-wrap max-w-3xl text-center"
       >
         HaHuJobs offers digital career profiling, job application and
         subscription based relevant vacancy announcement notifications to job

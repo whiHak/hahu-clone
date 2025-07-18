@@ -23,7 +23,7 @@ import { Menu, vTooltip  } from 'floating-vue';
   <div class="relative bg-white dark:bg-[#1B2637] rounded-xl hover:shadow-lg  border-2 border-gray-200 dark:border-[#02201D] hover:border-[#009688] p-5 w-full min-w-[300px] h-[500px] flex flex-col gap-3 cursor-pointer">
     <!-- Featured Badge -->
      <div class=" flex gap-2 items-center w-8 h-8 ">
-       <img src="/images/bookmark.png" alt="Featured" class="w-4 h-4 absolute flex items-center justify-center px-4 text-xs text-center top-2 sm:top-0 right-10 sm:right-32 gap-x-2 md:text-base border-primary" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6 relative top-[-22px] md:right-[215px] right-[110px]  md:w-8 md:h-8 group-hover:text-primary text-[#009688]" data-v-ccf21bcf=""><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"></path></svg>
        <div class="bg-[#009688] absolute top-[-2px] right-[-1px] flex items-center justify-center w-12 h-8 px-3 py-1 sm:py-0 sm:px-4 sm:w-36 rounded-tr-xl gap-x-1 sm:gap-x-2 rounded-bl-md">
          <img src="/images/hahu_featured.svg" alt="Featured"/>
          <p class="hidden text-white sm:block font-light text-sm">Featured</p>
@@ -92,9 +92,9 @@ import { Menu, vTooltip  } from 'floating-vue';
       </span>
     </div>
 
-    <hr class="border-t border-gray-300 my-2" />
+    <hr class="border-t border-gray-300 my-1" />
     <!-- Job Summary -->
-    <div class="text-gray-600 text-center font-semibold text-sm line-clamp-3 dark:text-[#C7CACF]">
+    <div class="text-gray-600 text-center font-base text-sm  line-clamp-3 dark:text-[#C7CACF]">
       {{ summary }}
     </div>
     <!-- Buttons -->

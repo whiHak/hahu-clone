@@ -1,18 +1,19 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-    <footer class="w-full pt-10  bg-[#f8fdfc]">
+    <footer class="w-full pt-10  bg-[#f8fdfc] dark:bg-[#1B2637]">
       <div class="sm:container mx-auto flex flex-wrap justify-between items-start px-16 py-2 gap-10">
         <div class="flex flex-col min-w-[60px] max-w-[320px]">
           <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Get Started</div>
-          <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Sign up</a>
-          <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Login</a>
+          <NuxtLink href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Sign up</NuxtLink>
+          <NuxtLink href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Login</NuxtLink>
         </div>
         <div class="flex flex-col min-w-[60px] max-w-[320px]">
           <div class="font-bold text-base mb-2 text-gray-800 dark:text-white underline">Quick links</div>
-          <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">HahuJobs IO</a>
-          <a href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Minab Tech</a>
+          <NuxtLink href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">HahuJobs IO</NuxtLink>
+          <NuxtLink href="#" class="text-gray-700 text-sm mb-1 hover:text-teal-500 dark:text-white transition font-medium">Minab Tech</NuxtLink>
         </div>
         <div class="flex flex-col items-center min-w-[120px] md:min-w-[320px] max-w-[420px] sm:items-start">
           <img src="/images/minab-logo.png" alt="Minab Logo" class="w-40 mb-2" />
