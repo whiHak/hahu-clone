@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="sm:container mx-auto md:px-8 flex flex-col lg:flex-row">
+  <div class="sm:container mx-auto md:px-8 flex flex-col lg:flex-row min-h-[770px]">
     <!-- Sidebar -->
     <JobsSideBar />
 
