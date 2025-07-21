@@ -16,17 +16,14 @@ const debouncedFilterState = useDebounceFn(() => {
   let query: any = { ...route.query };
   const activeFilters: string[] = [];
 
-  // Add to activeFilters if active
   if (isBidActive.value) activeFilters.push('bid');
   if (isContractActive.value) activeFilters.push('contract');
   if (isFullTimeActive.value) activeFilters.push('full-time');
   if (isInternshipActive.value) activeFilters.push('internship');
   if (isPartTimeActive.value) activeFilters.push('part-time');
 
-  // Set the query.t based on active filters
   query.t = activeFilters.length > 0 ? activeFilters.join(',') : undefined;
 
-  // Delete min and max yoe if isMaxYoe is true
   if (isMaxYoe.value) {
     delete query.min_yoe;
     delete query.max_yoe;
@@ -61,7 +58,7 @@ watch(filterState, debouncedFilterState);
 
 <template>
   <div
-    class="xs:sticky lg:top-28 h-fit lg:w-3/12 2xl:w-2/10 px-4 lg:pr-8 lg:pl-2 mt-20 lg:mt-2 md:mx-16 lg:mx-0"
+    class="sticky lg:top-28 h-fit lg:w-3/12 2xl:w-2/10 px-4 lg:pr-8 lg:pl-2 md:mt-20 lg:mt-2 md:mx-16 lg:mx-0"
   >
     <UCollapsible
       :open="isOpen"
