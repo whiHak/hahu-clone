@@ -47,7 +47,6 @@ const onUpdateSelectedCity = (value: string) => {
 const page = ref(2)
 const itemsPerPage = 3;
 const updatePage = (value:number) =>{
-
   let query = {...route.query}
   query.page=value.toString();
   router.push({query})
@@ -166,7 +165,7 @@ const jobs = ref([
           </div>
         </div>
       </div>
-       <p class="text-md text-gray-600 mb-5 mt-2 dark:text-gray-400 font-bold">Showing {{ (page - 1) * itemsPerPage + 1 }} to {{ Math.min(page * itemsPerPage, jobs.length) }} of {{ jobs.length }} posts</p>
+       <p class="text-md text-gray-600 mb-5 mt-2 dark:text-gray-400 font-bold">Showing {{ Math.min(page * itemsPerPage, jobs.length) }} of {{ jobs.length }} posts</p>
 
        <div v-if="jobs.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">
           <div v-for="job in jobs.slice((page - 1) * itemsPerPage, page * itemsPerPage)" :key="job.title" class="h-max">
@@ -180,8 +179,10 @@ const jobs = ref([
         </div>
 
         <div class="flex gap-2 w-full items-center relative sm:top-3 self-center justify-center">
-          <Icon name="lucide:arrow-left" class=""  />
-          <button @click="page=page-1"  :disabled="page<=1" class="text-sm font-semibold hover:scale-101 hover:font-bold cursor-pointer disabled" :class="page<=1 && 'disabled'">Previous</button>
+          <button @click="page=page-1"  :disabled="page<=1" class="flex gap-2 items-center text-sm font-semibold hover:scale-101 hover:font-bold cursor-pointer disabled" :class="page<=1 && 'disabled'">
+            <Icon name="lucide:arrow-left" class=""  />
+            Previous
+          </button>
           <UPagination 
           v-model:page="page" 
           as="div"
@@ -199,8 +200,10 @@ const jobs = ref([
           }"
           class=""
         />
-        <button @click="page=page+1" :disabled="page>=2" class="text-sm font-semibold ml-4 hover:scale-101 hover:font-bold cursor-pointer">Next</button>
-        <Icon name="lucide:arrow-right" class="" />
+        <button @click="page=page+1" :disabled="page>=2" class="text-sm flex gap-2 items-center font-semibold ml-4 hover:scale-101 hover:font-bold cursor-pointer">
+          Next
+          <Icon name="lucide:arrow-right" class="" />
+        </button>
         </div>
         
       </div>
